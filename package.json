@@ -9,9 +9,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "echo 'Starting TypeScript compilation...' && tsc --verbose && echo 'TypeScript compilation complete'",
-    "preinstall": "echo 'Starting npm install...'",
-    "postinstall": "echo 'npm install complete'",
+    "build": "tsc",
+    "vercel-build": "npm run build",
     "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn src/server.ts",
     "scrape": "ts-node src/scripts/scrape-leupold.ts"
