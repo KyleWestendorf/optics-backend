@@ -21,10 +21,10 @@ const allowedOrigins = [
   'https://opticpreview.com',
   'https://huntingscopepreview.com',
   'https://binocularpreview.com',
-  'https://www.riflescopepreview.com',
-  'https://www.opticpreview.com',
-  'https://www.huntingscopepreview.com',
-  'https://www.binocularpreview.com',
+  'https://www.riflescopepreview.com/',
+  'https://www.opticpreview.com/',
+  'https://www.huntingscopepreview.com/',
+  'https://www.binocularpreview.com/',
 ];
 
 app.use(cors({
