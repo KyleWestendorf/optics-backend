@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: optics-backend
+    runtime: node
+    buildCommand: |
+      echo "Node version: $(node -v)"
+      echo "NPM version: $(npm -v)"
+      npm install --verbose
+      npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: NPM_CONFIG_LOGLEVEL
+        value: verbose
+    healthCheckPath: /api/scopes 
