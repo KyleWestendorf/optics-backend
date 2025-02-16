@@ -78,6 +78,7 @@ cron.schedule('0 0 * * *', async () => {
       ...newScopes
     };
 
+    
     // Save updated data
     writeFileSync(scopesFilePath, JSON.stringify(scopesData, null, 2));
     console.log('Scope data updated successfully');
