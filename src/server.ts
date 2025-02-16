@@ -15,7 +15,16 @@ const allowedOrigins = [
   'https://optics-simulator.onrender.com', // Production frontend URL
   'https://kylewestendorf.github.io',  // GitHub Pages URL
   'https://optics-c9pb.vercel.app',    // Vercel frontend URL
-  'https://optics-frj6kqm88-kyle-westendorfs-projects.vercel.app' // Vercel backend URL
+  'https://optics-frj6kqm88-kyle-westendorfs-projects.vercel.app',
+  'https://riflescopepreview.com',
+  'https://riflescopepreview.com',
+  'https://opticpreview.com',
+  'https://huntingscopepreview.com',
+  'https://binocularpreview.com',
+  'https://www.riflescopepreview.com',
+  'https://www.opticpreview.com',
+  'https://www.huntingscopepreview.com',
+  'https://www.binocularpreview.com',
 ];
 
 app.use(cors({
@@ -23,11 +32,13 @@ app.use(cors({
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
     
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
+    // Allow all Vercel domains and localhost during development
+    if (origin.includes('vercel.app') || origin.includes('localhost') || allowedOrigins.includes(origin)) {
+      return callback(null, true);
     }
-    return callback(null, true);
+    
+    const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+    return callback(new Error(msg), false);
   },
   credentials: true
 }));
