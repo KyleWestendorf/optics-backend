@@ -13,7 +13,9 @@ const port = process.env.PORT || 3000;
 const allowedOrigins = [
   'http://localhost:4200',  // Angular dev server
   'https://optics-simulator.onrender.com', // Production frontend URL
-  'https://kylewestendorf.github.io'  // GitHub Pages URL
+  'https://kylewestendorf.github.io',  // GitHub Pages URL
+  'https://optics-c9pb.vercel.app',    // Vercel frontend URL
+  'https://optics-frj6kqm88-kyle-westendorfs-projects.vercel.app' // Vercel backend URL
 ];
 
 app.use(cors({
