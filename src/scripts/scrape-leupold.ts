@@ -175,7 +175,7 @@ export async function scrapeLeupoldScopes(): Promise<{ [key: string]: Scope }> {
       await page.waitForSelector('.product-items', { timeout: 10000 });
 
       // Extract scopes from current page
-      const pageScopes = await page.evaluate((RETICLE_TYPES) => {
+      const pageScopes = await page.evaluate((RETICLE_TYPES: any) => {
         const scopeData: { [key: string]: any } = {};
         
         document.querySelectorAll('.product-item').forEach((item) => {

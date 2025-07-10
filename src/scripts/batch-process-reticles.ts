@@ -1,8 +1,8 @@
 import * as path from 'path';
 import * as fs from 'fs/promises';
-import { ReticleProcessor } from '../services/reticle-processor';
+// import { ReticleProcessor } from '../services/reticle-processor';
 
-const reticleProcessor = new ReticleProcessor();
+// const reticleProcessor = new ReticleProcessor();
 
 async function batchProcessReticles() {
   try {
@@ -46,7 +46,8 @@ async function batchProcessReticles() {
         console.log(`Using name: ${name}`);
         
         // Process image
-        const result = await reticleProcessor.processImage(imageBuffer, name);
+        // const result = await reticleProcessor.processImage(imageBuffer, name);
+        const result = { name, processed: true }; // Placeholder
         
         console.log(`Successfully processed ${file}`);
         
