@@ -1,38 +1,4 @@
 {
-  "vortex-diamondback-tactical-6-24x50": {
-    "minZoom": 6,
-    "maxZoom": 24,
-    "currentZoom": 6,
-    "model": "Vortex Diamondback Tactical 6-24x50 FFP",
-    "description": "First focal plane tactical riflescope with precision glass and reliable tracking",
-    "manufacturer": "Vortex",
-    "price": "$349.99",
-    "url": "https://www.amazon.com/dp/B07JBQZPX8",
-    "series": "Diamondback Tactical",
-    "objectiveLens": 50,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "leupold-vx-freedom-3-9x40": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "Leupold VX-Freedom 3-9x40 Duplex",
-    "description": "Reliable hunting riflescope with classic duplex reticle",
-    "manufacturer": "Leupold",
-    "price": "$199.99",
-    "url": "https://www.amazon.com/dp/B07L9QKZX5",
-    "series": "VX-Freedom",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
   "amazon-monstrum-g3-6-24x50-first-focal-plane-ffp-rifle-scope-with-illuminated-moa-reticle-and-adjustable-objective-0": {
     "minZoom": 6,
     "maxZoom": 24,
@@ -50,7 +16,7 @@
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
     }
   },
-  "amazon-monstrum-banshee-ed-1-10x24-lpvo-rifle-scope-with-offset-scope-mount-3": {
+  "amazon-monstrum-banshee-ed-1-10x24-lpvo-rifle-scope-with-offset-scope-mount-1": {
     "minZoom": 1,
     "maxZoom": 10,
     "currentZoom": 1,
@@ -61,6 +27,618 @@
     "url": "https://www.amazon.com/s?k=rifle+scope",
     "series": "Standard",
     "objectiveLens": 24,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-hornet-6-24x50-ffp-rifle-scope-includes-zero-stop-scope-level-and-detachable-sunshade-2": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Monstrum Hornet 6-24x50 FFP Rifle Scope | Includes Zero Stop, Scope Level, and Detachable Sunshade",
+    "description": "Monstrum Standard 6-24x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$179",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-tango-msr-lpvo-1-6x24mm-waterproof-fogproof-rugged-tactical-hunting-rifle-scope-second-focal-planesfpf2-includes-alpha-msr-aluminum-mount-flip-back-lens-covers-6": {
+    "minZoom": 1,
+    "maxZoom": 6,
+    "currentZoom": 1,
+    "model": "SIG SAUER Tango-MSR LPVO 1-6x24mm Waterproof Fogproof Rugged Tactical Hunting Rifle Scope | Second Focal Plane/SFP/F2 | Includes Alpha-MSR Aluminum Mount, Flip-Back Lens Covers",
+    "description": "Sig Sauer Tactical 1-6x24 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$249",
+    "url": "https://www.amazon.com/Sig-Sauer-Tango-1-6x24mm-Rifle/dp/B09RNFZTB5/ref=sr_1_7",
+    "series": "Tactical",
+    "objectiveLens": 24,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-tango-spr-6-24x52mm-30mm-tube-second-focal-planesfpf2-shockproof-waterproof-fogproof-tactical-riflescope-moa-bdc-1-reticle-flip-back-caps-throw-lever-included-sots46000-7": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "SIG SAUER Tango-SPR 6-24x52mm 30mm Tube Second Focal Plane/SFP/F2 Shockproof Waterproof Fogproof Tactical Riflescope | MOA BDC-1 Reticle, Flip-Back Caps & Throw Lever Included, SOTS46000",
+    "description": "Sig Sauer Tactical 6-24x52 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$204",
+    "url": "https://www.amazon.com/Tango-SPR-6-24x52mm-Shockproof-Waterproof-Riflescope/dp/B0F6NRJCRQ/ref=sr_1_8",
+    "series": "Tactical",
+    "objectiveLens": 52,
+    "reticle": {
+      "type": "BDC",
+      "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
+    }
+  },
+  "amazon-rifle-scope-10-40x56-34mm-tube-high-resolution-for-long-range-shooting-up-to-4000-meter-ipx7-waterproof-shock-proof-223-308-338-3006-45-durable-and-accurate-12": {
+    "minZoom": 10,
+    "maxZoom": 40,
+    "currentZoom": 10,
+    "model": "Rifle Scope 10-40X56, 34mm Tube, High Resolution for Long Range Shooting up to 4000 Meter, IPX7 Waterproof & Shock Proof .223, 308, 338, 3006, .45, Durable and Accurate",
+    "description": "Rifle Standard 10-40x56 riflescope",
+    "manufacturer": "Rifle",
+    "price": "$299",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-cvlife-eagleblaze-7-35x56-ffp-rifle-scope---ed-glass-zero-stop-illuminated-reticle-side-parallax-adjustment---first-focal-plane---long-range-rifle-scope-for-hunting---34mm-tube-13": {
+    "minZoom": 7,
+    "maxZoom": 35,
+    "currentZoom": 7,
+    "model": "CVLIFE EagleBlaze 7-35x56 FFP Rifle Scope - ED Glass, Zero Stop, Illuminated Reticle, Side Parallax Adjustment - First Focal Plane - Long Range Rifle Scope for Hunting - 34mm Tube",
+    "description": "CVLIFE Standard 7-35x56 riflescope",
+    "manufacturer": "CVLIFE",
+    "price": "$459",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-vortex-optics-copperhead-second-focal-plane-riflescope-copperhead-hd-10x42-binoculars-bundle-15": {
+    "minZoom": 10,
+    "maxZoom": 10,
+    "currentZoom": 10,
+    "model": "Vortex Optics Copperhead Second Focal Plane Riflescope & Copperhead HD 10x42 Binoculars Bundle",
+    "description": "Vortex Standard 10x42 riflescope",
+    "manufacturer": "Vortex",
+    "price": "$199",
+    "url": "https://www.amazon.com/Vortex-Copperhead-4-12x44-Riflescope-Binoculars/dp/B0CGBK9XXX/ref=sr_1_16",
+    "series": "Standard",
+    "objectiveLens": 42,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-buckmasters-4-16x44mm-30mm-tube-diameter-f2-second-focal-plane-riflescope---durable-waterproof-fogproof-hunting-rifle-scope-with-buckmasters-bdc-reticle-17": {
+    "minZoom": 4,
+    "maxZoom": 16,
+    "currentZoom": 4,
+    "model": "SIG SAUER Buckmasters 4-16x44mm 30mm Tube Diameter F2 / Second Focal Plane Riflescope - Durable Waterproof Fogproof Hunting Rifle Scope with Buckmasters BDC Reticle",
+    "description": "Sig Sauer Standard 4-16x44 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$163",
+    "url": "https://www.amazon.com/Waterproof-Fogproof-Diameter-4-16x44mm-Buckmasters/dp/B09W3WR9KW/ref=sr_1_18",
+    "series": "Standard",
+    "objectiveLens": 44,
+    "reticle": {
+      "type": "BDC",
+      "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
+    }
+  },
+  "amazon-xed-6-36x56mm-prs-rifle-scope-ffp-illuminated-reticle-with-zero-stop-35mm-tube-18": {
+    "minZoom": 6,
+    "maxZoom": 36,
+    "currentZoom": 6,
+    "model": "XED 6-36x56mm PRS Rifle Scope FFP Illuminated Reticle with Zero Stop 35mm Tube",
+    "description": "XED Standard 6-36x56 riflescope",
+    "manufacturer": "XED",
+    "price": "$659",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-cvlife-eagleblaze-5-25x56-ffp-rifle-scope---ed-glass-zero-stop-illuminated-reticle-side-parallax-adjustment---first-focal-plane---long-range-rifle-scope-for-hunting---34mm-tube-19": {
+    "minZoom": 5,
+    "maxZoom": 25,
+    "currentZoom": 5,
+    "model": "CVLIFE EagleBlaze 5-25x56 FFP Rifle Scope - ED Glass, Zero Stop, Illuminated Reticle, Side Parallax Adjustment - First Focal Plane - Long Range Rifle Scope for Hunting - 34mm Tube",
+    "description": "CVLIFE Standard 5-25x56 riflescope",
+    "manufacturer": "CVLIFE",
+    "price": "$299",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-triton-navigator-1-10x28-first-focal-plane-ffp-lpvo-rifle-scope-chevron-c2-bdc-reticle-21": {
+    "minZoom": 1,
+    "maxZoom": 10,
+    "currentZoom": 1,
+    "model": "Triton Navigator+ 1-10x28 First Focal Plane FFP LPVO Rifle Scope | Chevron C2 BDC Reticle",
+    "description": "Triton Standard 1-10x28 riflescope",
+    "manufacturer": "Triton",
+    "price": "$204",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 28,
+    "reticle": {
+      "type": "BDC",
+      "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
+    }
+  },
+  "amazon-arken-optics-ep5-gen-2-7-35x56-ffp-long-range-precision-rifle-scope-with-illuminated-vpr-reticle-zero-stop-and-34mm-tube-23": {
+    "minZoom": 7,
+    "maxZoom": 35,
+    "currentZoom": 7,
+    "model": "Arken Optics EP5 Gen 2 7-35x56 FFP Long Range Precision Rifle Scope with Illuminated VPR Reticle, Zero Stop and 34mm Tube",
+    "description": "Arken Standard 7-35x56 riflescope",
+    "manufacturer": "Arken",
+    "price": "$551",
+    "url": "https://www.amazon.com/Arken-Optics-7-35x56-Precision-Illuminated/dp/B0DTK84S19/ref=sr_1_24",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-monstrum-beast-3-18x50-ffp-rifle-scope-featuring-ed-glass-adjustable-objective-precision-turrets-with-zero-stop-daylight-bright-reticle-and-anti-cant-scope-rings-24": {
+    "minZoom": 3,
+    "maxZoom": 18,
+    "currentZoom": 3,
+    "model": "Monstrum Beast 3-18x50 FFP Rifle Scope | Featuring ED Glass, Adjustable Objective, Precision Turrets with Zero Stop, Daylight Bright Reticle, and Anti-Cant Scope Rings",
+    "description": "Monstrum Standard 3-18x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$169",
+    "url": "https://www.amazon.com/Monstrum-Featuring-Adjustable-Objective-Precision/dp/B0F2WN3X62/ref=sr_1_25",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-hornet-4-16x50-ffp-rifle-scope-includes-zero-stop-scope-level-and-detachable-sunshade-25": {
+    "minZoom": 4,
+    "maxZoom": 16,
+    "currentZoom": 4,
+    "model": "Monstrum Hornet 4-16x50 FFP Rifle Scope | Includes Zero Stop, Scope Level, and Detachable Sunshade",
+    "description": "Monstrum Standard 4-16x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$159",
+    "url": "https://www.amazon.com/Monstrum-4-16x50-Detachable-Sunshade-Reticle/dp/B0D7NCDFKR/ref=sr_1_26",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-tango-spr-4-16x44mm-30mm-tube-second-focal-planesfpf2-shockproof-waterproof-fogproof-tactical-riflescope-moa-bdc-1-reticle-spr-scope-mount-flip-back-caps-included-sots44000-26": {
+    "minZoom": 4,
+    "maxZoom": 16,
+    "currentZoom": 4,
+    "model": "SIG SAUER Tango-SPR 4-16x44mm 30mm Tube Second Focal Plane/SFP/F2 Shockproof Waterproof Fogproof Tactical Riflescope | MOA BDC-1 Reticle, SPR Scope Mount, Flip-Back Caps Included, SOTS44000",
+    "description": "Sig Sauer Tactical 4-16x44 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$177",
+    "url": "https://www.amazon.com/Tango-SPR-4-16x44mm-Shockproof-Waterproof-Riflescope/dp/B0F4SNWFT5/ref=sr_1_27",
+    "series": "Tactical",
+    "objectiveLens": 44,
+    "reticle": {
+      "type": "BDC",
+      "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
+    }
+  },
+  "amazon-leupold-vx-freedom-3-9x40mm-riflescope-27": {
+    "minZoom": 3,
+    "maxZoom": 9,
+    "currentZoom": 3,
+    "model": "Leupold VX-Freedom 3-9x40mm Riflescope",
+    "description": "Leupold VX-Freedom 3-9x40 riflescope",
+    "manufacturer": "Leupold",
+    "price": "$299",
+    "url": "https://www.amazon.com/Leupold-VX-Freedom-3-9x40mm-Riflescope/dp/B08QSKGZPL/ref=sr_1_28",
+    "series": "VX-Freedom",
+    "objectiveLens": 40,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-agm-rattler-ts19-256-thermal-imaging-riflescope-12um-256x192-31": {
+    "minZoom": 256,
+    "maxZoom": 256,
+    "currentZoom": 256,
+    "model": "AGM Rattler TS19-256 Thermal Imaging RifleScope 12um 256x192",
+    "description": "AGM Standard 256x192 riflescope",
+    "manufacturer": "AGM",
+    "price": "$713",
+    "url": "https://www.amazon.com/AGM-Rattler-Riflescope-Transmission-Activities/dp/B09LWRC4GZ/ref=sr_1_32",
+    "series": "Standard",
+    "objectiveLens": 192,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-athlon-optics-argos-btr-gen2-8-34x56-first-focal-plane-riflescopes-32": {
+    "minZoom": 8,
+    "maxZoom": 34,
+    "currentZoom": 8,
+    "model": "Athlon Optics Argos BTR GEN2 8-34X56 First Focal Plane Riflescopes",
+    "description": "Athlon Standard 8-34x56 riflescope",
+    "manufacturer": "Athlon",
+    "price": "$280",
+    "url": "https://www.amazon.com/Athlon-Optics-Argos-8-34X56-Riflescope/dp/B08296719H/ref=sr_1_33",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-hornet-6-24x50-ffp-rifle-scope-includes-zero-stop-scope-level-and-detachable-sunshade-33": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Monstrum Hornet 6-24x50 FFP Rifle Scope | Includes Zero Stop, Scope Level, and Detachable Sunshade",
+    "description": "Monstrum Standard 6-24x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$169",
+    "url": "https://www.amazon.com/Monstrum-Hornet-6-24x50-Detachable-Sunshade/dp/B0CQD8WK8F/ref=sr_1_34",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-burris-optics-fullfield-2-8x35mm-hunting-riflescopes-1-inch-tube-rear-focal-plane-waterproof-shockproof-forever-warranty-34": {
+    "minZoom": 2,
+    "maxZoom": 8,
+    "currentZoom": 2,
+    "model": "Burris Optics Fullfield 2-8x35mm Hunting RifleScopes, 1-inch Tube, Rear Focal Plane, Waterproof, Shockproof, Forever Warranty",
+    "description": "Burris Standard 2-8x35 riflescope",
+    "manufacturer": "Burris",
+    "price": "$159",
+    "url": "https://www.amazon.com/Burris-Fullfield-RifleScopes-Waterproof-Shockproof/dp/B0DW5TB86K/ref=sr_1_35",
+    "series": "Standard",
+    "objectiveLens": 35,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-challenger-5-30x56-ffp-rifle-scope-featuring-ed-glass-adjustable-objective-precision-turrets-with-zero-stop-daylight-bright-reticle-and-anti-cant-scope-rings-38": {
+    "minZoom": 5,
+    "maxZoom": 30,
+    "currentZoom": 5,
+    "model": "Monstrum Challenger 5-30x56 FFP Rifle Scope | Featuring ED Glass, Adjustable Objective, Precision Turrets with Zero Stop, Daylight Bright Reticle, and Anti-Cant Scope Rings",
+    "description": "Monstrum Standard 5-30x56 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$179",
+    "url": "https://www.amazon.com/Monstrum-Challenger-Featuring-Adjustable-Objective/dp/B0DP42Z6X2/ref=sr_1_39",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-hd-5-30x56-prs-rifle-optics-first-focal-planeffp-rifle-scopered-illuminated-reticlezero-stop-34mm-tube-39": {
+    "minZoom": 5,
+    "maxZoom": 30,
+    "currentZoom": 5,
+    "model": "HD 5-30x56 PRS Rifle Optics, First Focal Plane,FFP Rifle Scope,Red Illuminated Reticle,Zero Stop 34mm Tube",
+    "description": "HD Standard 5-30x56 riflescope",
+    "manufacturer": "HD",
+    "price": "$279",
+    "url": "https://www.amazon.com/DISCOVERYOPT-5-30x56-Illuminated-Reticle-Hunting/dp/B0BZS8FPKC/ref=sr_1_40",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-sig-sauer-tango-spr-lpvo-1-4x24mm-30mm-tube-second-focal-planesfpf2-shockproof-waterproof-fogproof-tactical-scope-hellfire-illuminated-fl-4-reticle-flip-back-caps-included-sots41000-41": {
+    "minZoom": 1,
+    "maxZoom": 4,
+    "currentZoom": 1,
+    "model": "SIG SAUER Tango-SPR LPVO 1-4x24mm 30mm Tube Second Focal Plane/SFP/F2 Shockproof Waterproof Fogproof Tactical Scope| Hellfire Illuminated FL-4 Reticle, Flip-Back Caps Included, SOTS41000",
+    "description": "Sig Sauer Tactical 1-4x24 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$171",
+    "url": "https://www.amazon.com/Tango-SPR-Shockproof-Waterproof-Illuminated-Flip-Back/dp/B0F6TL2DS6/ref=sr_1_42",
+    "series": "Tactical",
+    "objectiveLens": 24,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-monstrum-banshee-ed-1-10x24-lpvo-rifle-scope-with-offset-scope-mount-42": {
+    "minZoom": 1,
+    "maxZoom": 10,
+    "currentZoom": 1,
+    "model": "Monstrum Banshee ED 1-10x24 LPVO Rifle Scope with Offset Scope Mount",
+    "description": "Monstrum Standard 1-10x24 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$159",
+    "url": "https://www.amazon.com/Monstrum-Banshee-1-10x24-Rifle-Offset/dp/B0C3G8S6XX/ref=sr_1_43",
+    "series": "Standard",
+    "objectiveLens": 24,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-argos-btr-gen2-6-24x50-first-focal-plane-riflescopes-43": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Argos BTR GEN2 6-24X50 First Focal Plane Riflescopes",
+    "description": "Argos Standard 6-24x50 riflescope",
+    "manufacturer": "Argos",
+    "price": "$250",
+    "url": "https://www.amazon.com/Athlon-Optics-Argos-6-24X50-Riflescope/dp/B082972C5G/ref=sr_1_44",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-arken-optics-ep5-5-25x56-rifle-scope-ffp-vpr-illuminated-reticle-with-zero-stop-34mm-tube-44": {
+    "minZoom": 5,
+    "maxZoom": 25,
+    "currentZoom": 5,
+    "model": "Arken Optics EP5 5-25X56 Rifle Scope FFP VPR Illuminated Reticle with Zero Stop 34mm Tube",
+    "description": "Arken Standard 5-25x56 riflescope",
+    "manufacturer": "Arken",
+    "price": "$415",
+    "url": "https://www.amazon.com/Arken-Optics-5-25X56-Rifle-Reticle/dp/B0BFH8BP7F/ref=sr_1_45",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-leupold-vx-freedom-2-7x33-1-inch-hunt-plex-reticle-riflescope-45": {
+    "minZoom": 2,
+    "maxZoom": 7,
+    "currentZoom": 2,
+    "model": "Leupold VX-Freedom 2-7x33 (1 inch) Hunt-Plex Reticle Riflescope",
+    "description": "Leupold VX-Freedom 2-7x33 riflescope",
+    "manufacturer": "Leupold",
+    "price": "$299",
+    "url": "https://www.amazon.com/Leupold-180592-VX-Freedom-2-7x33mm-Riflescope/dp/B08QSLLV8C/ref=sr_1_46",
+    "series": "VX-Freedom",
+    "objectiveLens": 33,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-tango-msr-lpvo-1-10x28mm-34mm-tube-f2sfp-msr-bdc-10-reticle-durable-scockproof-waterproof-fogproof-hunting-rifle-scope-alpha-msr-mount-lens-covers-throw-lever-included-46": {
+    "minZoom": 1,
+    "maxZoom": 10,
+    "currentZoom": 1,
+    "model": "SIG SAUER Tango-MSR LPVO 1-10X28mm 34mm Tube F2/SFP MSR BDC-10 Reticle Durable Scockproof Waterproof Fogproof Hunting Rifle Scope, Alpha-MSR Mount, Lens Covers & Throw Lever Included",
+    "description": "Sig Sauer Standard 1-10x28 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$429",
+    "url": "https://www.amazon.com/Sig-Sauer-Tango-MSR-1-10x28mm-Rifle/dp/B0C8KH2RQP/ref=sr_1_47",
+    "series": "Standard",
+    "objectiveLens": 28,
+    "reticle": {
+      "type": "BDC",
+      "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
+    }
+  },
+  "amazon-arken-optics-sh4-gen2-4-16x50-rifle-scope-ffp-vpr-illuminated-reticle-with-zero-stop---34mm-tube-48": {
+    "minZoom": 4,
+    "maxZoom": 16,
+    "currentZoom": 4,
+    "model": "Arken Optics SH4 GEN2 4-16X50 Rifle Scope FFP VPR Illuminated Reticle with Zero Stop - 34mm Tube",
+    "description": "Arken Standard 4-16x50 riflescope",
+    "manufacturer": "Arken",
+    "price": "$280",
+    "url": "https://www.amazon.com/Arken-Optics-SH4-GEN2-4-16X50/dp/B0BFDFWDNP/ref=sr_1_49",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-optics-ed-gen-ii-5-25x56mm-prs-rifle-scope-ffp-illuminated-reticle-with-zero-stop-34mm-tube-50": {
+    "minZoom": 5,
+    "maxZoom": 25,
+    "currentZoom": 5,
+    "model": "Optics ED GEN-II 5-25x56mm PRS Rifle Scope FFP, Illuminated Reticle with Zero Stop 34mm Tube",
+    "description": "Optics Standard 5-25x56 riflescope",
+    "manufacturer": "Optics",
+    "price": "$359",
+    "url": "https://www.amazon.com/DISCOVERYOPT-5-25x56mm-Illuminated-Reticle-ED5-25x56MOA/dp/B0DRCHJLB9/ref=sr_1_51",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-burris-fullfield-iv-4-16x50mm-hunting-scope-51": {
+    "minZoom": 4,
+    "maxZoom": 16,
+    "currentZoom": 4,
+    "model": "Burris Fullfield IV 4-16x50mm Hunting Scope",
+    "description": "Burris Standard 4-16x50 riflescope",
+    "manufacturer": "Burris",
+    "price": "$212",
+    "url": "https://www.amazon.com/Burris-Fullfield-4-16x50mm-Hunting-Creedmoor/dp/B08HR96YWC/ref=sr_1_52",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-6-24x50-parallax-adjustment-first-focal-plane-rifle-scope-for-hunting-and-shotting30mm-tubewide-field-of-view-moa-reticlefast-focus-eyepiece-long-eye-reliefffp-rifle-scope-54": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "6-24x50 Parallax Adjustment, First Focal Plane Rifle Scope for Hunting and Shotting,30mm Tube,Wide Field of View, Moa Reticle,Fast Focus Eyepiece, Long Eye Relief,FFP Rifle Scope",
+    "description": "6-24x50 Standard 6-24x50 riflescope",
+    "manufacturer": "6-24x50",
+    "price": "$199",
+    "url": "https://www.amazon.com/Edenberg-Parallax-Adjustment-Shotting-Eyepiece/dp/B0CQ3QM3S2/ref=sr_1_55",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-tango-msr-lpvo-1-8x24mm-30mm-maintube-sfp-riflescope---shockproof-waterproof-fogproof-hunting-rifle-scope-with-illuminated-msr-bdc-8-reticle---lens-covers-cantilever-mount-included-57": {
+    "minZoom": 1,
+    "maxZoom": 8,
+    "currentZoom": 1,
+    "model": "SIG SAUER Tango-MSR LPVO 1-8x24mm 30mm Maintube SFP Riflescope - Shockproof Waterproof Fogproof Hunting Rifle Scope with Illuminated MSR BDC-8 Reticle - Lens Covers & Cantilever Mount Included",
+    "description": "Sig Sauer Standard 1-8x24 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$429",
+    "url": "https://www.amazon.com/SAUER-Tango-MSR-1-8x24mm-Maintube-Riflescope/dp/B0C8K172LQ/ref=sr_1_58",
+    "series": "Standard",
+    "objectiveLens": 24,
+    "reticle": {
+      "type": "BDC",
+      "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
+    }
+  },
+  "amazon-vortex-optics-venom-1-6x24-second-focal-plane-riflescope-58": {
+    "minZoom": 1,
+    "maxZoom": 6,
+    "currentZoom": 1,
+    "model": "Vortex Optics Venom 1-6x24 Second Focal Plane Riflescope",
+    "description": "Vortex Standard 1-6x24 riflescope",
+    "manufacturer": "Vortex",
+    "price": "$299",
+    "url": "https://www.amazon.com/Vortex-Optics-1-6x24-Second-Riflescope/dp/B0CPPDFDD3/ref=sr_1_59",
+    "series": "Standard",
+    "objectiveLens": 24,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-leupold-vx-freedom-15-4x20-1-inch-pig-plex-reticle-riflescope-59": {
+    "minZoom": 1.5,
+    "maxZoom": 4,
+    "currentZoom": 1.5,
+    "model": "Leupold VX-Freedom 1.5-4x20 (1 inch) Pig-Plex Reticle Riflescope",
+    "description": "Leupold VX-Freedom 1.5-4x20 riflescope",
+    "manufacturer": "Leupold",
+    "price": "$299",
+    "url": "https://www.amazon.com/Leupold-VX-Freedom-1-5-4x20mm-Riflescope-Pig-Plex/dp/B078XGR9ZZ/ref=sr_1_60",
+    "series": "VX-Freedom",
+    "objectiveLens": 20,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-hornet-6-24x50-ffp-rifle-scope-includes-zero-stop-scope-level-and-detachable-sunshade-1": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Monstrum Hornet 6-24x50 FFP Rifle Scope | Includes Zero Stop, Scope Level, and Detachable Sunshade",
+    "description": "Monstrum Standard 6-24x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$179",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-beast-6-24x50-ffp-rifle-scope-featuring-ed-glass-adjustable-objective-precision-turrets-with-zero-stop-daylight-bright-reticle-and-anti-cant-scope-rings-2": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Monstrum Beast 6-24x50 FFP Rifle Scope | Featuring ED Glass, Adjustable Objective, Precision Turrets with Zero Stop, Daylight Bright Reticle, and Anti-Cant Scope Rings",
+    "description": "Monstrum Standard 6-24x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$179",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 50,
     "reticle": {
       "type": "Duplex",
       "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
@@ -84,279 +662,7 @@
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
     }
   },
-  "amazon-arken-optics-ep5-gen-2-7-35x56-ffp-long-range-precision-rifle-scope-with-illuminated-vpr-reticle-zero-stop-and-34mm-tube-5": {
-    "minZoom": 7,
-    "maxZoom": 35,
-    "currentZoom": 7,
-    "model": "Arken Optics EP5 Gen 2 7-35x56 FFP Long Range Precision Rifle Scope with Illuminated VPR Reticle, Zero Stop and 34mm Tube",
-    "description": "Arken Standard 7-35x56 riflescope",
-    "manufacturer": "Arken",
-    "price": "$551",
-    "url": "https://www.amazon.com/Arken-Optics-7-35x56-Precision-Illuminated/dp/B0DTK84S19/ref=sr_1_6",
-    "series": "Standard",
-    "objectiveLens": 56,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-cvlife-rifle-scope-6-24x50-ao-red-and-green-illuminated-long-range-scope-for-hunting-with-scope-rings-6": {
-    "minZoom": 6,
-    "maxZoom": 24,
-    "currentZoom": 6,
-    "model": "CVLIFE Rifle Scope 6-24x50 AO Red and Green Illuminated Long Range Scope for Hunting with Scope Rings",
-    "description": "CVLIFE Standard 6-24x50 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$49",
-    "url": "https://www.amazon.com/CVLIFE-Hunting-Rifle-6-24x50-Illuminated/dp/B007UT3N4Y/ref=sr_1_7",
-    "series": "Standard",
-    "objectiveLens": 50,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-cvlife-3-9x40-optics-r4-reticle-crosshair-scope-with-scope-mounts-8": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "CVLIFE 3-9x40 Optics R4 Reticle Crosshair Scope with Scope Mounts",
-    "description": "CVLIFE Standard 3-9x40 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$26",
-    "url": "https://www.amazon.com/CVLIFE-3-9x40-Optics-Reticle-Crosshair/dp/B007UT3OFC/ref=sr_1_9",
-    "series": "Standard",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-pinty-3-9x40-red-green-rangefinder-illuminated-optical-rifle-scope-9": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "Pinty 3-9X40 Red Green Rangefinder Illuminated Optical Rifle Scope",
-    "description": "Pinty Standard 3-9x40 riflescope",
-    "manufacturer": "Pinty",
-    "price": "$26",
-    "url": "https://www.amazon.com/Pinty-3-9X40-Rangefinder-Illuminated-Optical/dp/B019Q7H1IQ/ref=sr_1_10",
-    "series": "Standard",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-monstrum-beast-6-24x50-ffp-rifle-scope-featuring-ed-glass-adjustable-objective-precision-turrets-with-zero-stop-daylight-bright-reticle-and-anti-cant-scope-rings-10": {
-    "minZoom": 6,
-    "maxZoom": 24,
-    "currentZoom": 6,
-    "model": "Monstrum Beast 6-24x50 FFP Rifle Scope | Featuring ED Glass, Adjustable Objective, Precision Turrets with Zero Stop, Daylight Bright Reticle, and Anti-Cant Scope Rings",
-    "description": "Monstrum Standard 6-24x50 riflescope",
-    "manufacturer": "Monstrum",
-    "price": "$179",
-    "url": "https://www.amazon.com/s?k=rifle+scope",
-    "series": "Standard",
-    "objectiveLens": 50,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-sniper-rifle-scope-mt-6-24x50-with-redgreenblue-illuminated-reticle-riflescope-adjustable-objective-11": {
-    "minZoom": 6,
-    "maxZoom": 24,
-    "currentZoom": 6,
-    "model": "SNIPER Rifle Scope MT 6-24x50 with Red/Green/Blue Illuminated Reticle Riflescope, Adjustable Objective",
-    "description": "SNIPER Standard 6-24x50 riflescope",
-    "manufacturer": "SNIPER",
-    "price": "$119",
-    "url": "https://www.amazon.com/s?k=rifle+scope",
-    "series": "Standard",
-    "objectiveLens": 50,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-atn-x-sight-pro-smart-daynight-hunting-scope-wballistics-calc-3864x2218-resolution-video-record-wi-fi-18hrs-battery-12": {
-    "minZoom": 3864,
-    "maxZoom": 3864,
-    "currentZoom": 3864,
-    "model": "ATN X-Sight Pro Smart Day/Night Hunting Scope w/Ballistics Calc, 3864x2218 Resolution, Video Record, Wi-Fi, 18hrs+ Battery",
-    "description": "ATN Standard 3864x2218 riflescope",
-    "manufacturer": "ATN",
-    "price": "$794",
-    "url": "https://www.amazon.com/s?k=rifle+scope",
-    "series": "Standard",
-    "objectiveLens": 2218,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-monstrum-g3-6-36x56-first-focal-plane-ffp-rifle-scope-with-zero-stop-13": {
-    "minZoom": 6,
-    "maxZoom": 36,
-    "currentZoom": 6,
-    "model": "Monstrum G3 6-36x56 First Focal Plane FFP Rifle Scope | with Zero Stop",
-    "description": "Monstrum Standard 6-36x56 riflescope",
-    "manufacturer": "Monstrum",
-    "price": "$319",
-    "url": "https://www.amazon.com/s?k=rifle+scope",
-    "series": "Standard",
-    "objectiveLens": 56,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-cvlife-4x32-compact-rifle-scope-crosshair-optics-hunting-scope-14": {
-    "minZoom": 4,
-    "maxZoom": 4,
-    "currentZoom": 4,
-    "model": "CVLIFE 4x32 Compact Rifle Scope Crosshair Optics Hunting Scope",
-    "description": "CVLIFE Standard 4x32 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$29",
-    "url": "https://www.amazon.com/CVLIFE-Compact-Crosshair-Optics-Hunting/dp/B01BBTS3JI/ref=sr_1_15",
-    "series": "Standard",
-    "objectiveLens": 32,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-swarovski-ds-digital-riflescope-5-25x52-p-gen-ii---4a-i-71002-16": {
-    "minZoom": 5,
-    "maxZoom": 25,
-    "currentZoom": 5,
-    "model": "Swarovski dS Digital Riflescope 5-25x52 P GEN. II - 4A-I (71002)",
-    "description": "Swarovski Standard 5-25x52 riflescope",
-    "manufacturer": "Swarovski",
-    "price": "$5",
-    "url": "https://www.amazon.com/Swarovski-Optik-5-25x52-Riflescope-Illuminated/dp/B09FYMVBR4/ref=sr_1_17",
-    "series": "Standard",
-    "objectiveLens": 52,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-sig-sauer-buckmasters-3-12x44mm-1-tube-second-focal-planesfpf2-durable-shockproof-waterproof-fogproof-black-riflescope-17": {
-    "minZoom": 3,
-    "maxZoom": 12,
-    "currentZoom": 3,
-    "model": "SIG SAUER Buckmasters 3-12x44mm 1\" Tube Second Focal Plane/SFP/F2 Durable Shockproof Waterproof Fogproof Black Riflescope",
-    "description": "Sig Sauer Standard 3-12x44 riflescope",
-    "manufacturer": "Sig Sauer",
-    "price": "$99",
-    "url": "https://www.amazon.com/Buckmasters-Waterproof-Shockproof-One-Piece-Riflescope/dp/B08TRT1KVT/ref=sr_1_18",
-    "series": "Standard",
-    "objectiveLens": 44,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-3-9x32ao-40ao4-16x44sf-rifle-scopered-green-illuminated-optical-riflescope-objective-lens-34-44mm-with-crosshair-reticle-free-mount-bracketshockproof-waterproof-fogproof-18": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "3-9x32AO-40AO/4-16x44SF Rifle Scope,Red & Green Illuminated Optical Riflescope Objective Lens 34-44mm with Crosshair Reticle Free Mount Bracket,Shockproof, Waterproof, Fogproof",
-    "description": "3-9x32AO-40AO/4-16x44SF Standard 3-9x32 riflescope",
-    "manufacturer": "3-9x32AO-40AO/4-16x44SF",
-    "price": "$69",
-    "url": "https://www.amazon.com/s?k=rifle+scope",
-    "series": "Standard",
-    "objectiveLens": 32,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-bestsight-4-16x446-24x50-rifle-scopelong-range-scopesecond-focal-plane-scope5-level-red-green-illuminated-reticle-and-side-focus-dial-and-locking-turret-sunshadewith-11mm-mount-20mm-mount-19": {
-    "minZoom": 4,
-    "maxZoom": 16,
-    "currentZoom": 4,
-    "model": "BESTSIGHT 4-16x44/6-24x50 Rifle Scope,Long Range Scope,Second Focal Plane Scope,5-Level Red Green Illuminated Reticle and Side Focus Dial and Locking Turret Sunshade,with 11mm Mount & 20mm Mount",
-    "description": "BESTSIGHT Standard 4-16x44 riflescope",
-    "manufacturer": "BESTSIGHT",
-    "price": "$55",
-    "url": "https://www.amazon.com/s?k=rifle+scope",
-    "series": "Standard",
-    "objectiveLens": 44,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-uuq-4-16x44ao-rifle-scope-fits-11mm-20mm-mounts-for-hunting-with-locking-turret-sunshadesfprgb-illuminationmil-dot-reticlefront-parallax-adjustment-long-range-optics-20": {
-    "minZoom": 4,
-    "maxZoom": 16,
-    "currentZoom": 4,
-    "model": "UUQ 4-16X44AO Rifle Scope Fits 11mm /20mm Mounts, for Hunting with Locking Turret Sunshade,SFP,R/G/B Illumination,Mil-dot Reticle,Front Parallax Adjustment,-Long Range Optics",
-    "description": "UUQ Standard 4-16x44 riflescope",
-    "manufacturer": "UUQ",
-    "price": "$55",
-    "url": "https://www.amazon.com/s?k=rifle+scope",
-    "series": "Standard",
-    "objectiveLens": 44,
-    "reticle": {
-      "type": "Mil-Dot",
-      "description": "Military standard reticle with dots spaced at 1 mil intervals for range estimation.",
-      "svgPath": "M50,0 V100 M0,50 H100 M48,48 h4 v4 h-4 z M35,50 h4 v4 h-4 z M65,50 h4 v4 h-4 z"
-    }
-  },
-  "amazon-pinty-rifle-scope-red-dot-laser-combo-4-12x50-illuminated-optics-with-4-reticle-red-green-reflex-sight-green-dot-laser-sight-21": {
-    "minZoom": 4,
-    "maxZoom": 12,
-    "currentZoom": 4,
-    "model": "PINTY Rifle Scope Red Dot Laser Combo 4-12x50 Illuminated Optics with 4 Reticle Red Green Reflex Sight, Green Dot Laser Sight",
-    "description": "PINTY Standard 4-12x50 riflescope",
-    "manufacturer": "PINTY",
-    "price": "$104",
-    "url": "https://www.amazon.com/s?k=rifle+scope",
-    "series": "Standard",
-    "objectiveLens": 50,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-cvlife-3-9x40-rifle-scope-red-green-illuminated-optical-riflescope-mil-dot-reticle-scope-for-hunting-with-mounts-22": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "CVLIFE 3-9x40 Rifle Scope, Red & Green Illuminated Optical Riflescope, Mil-dot Reticle Scope for Hunting with Mounts",
-    "description": "CVLIFE Standard 3-9x40 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$31",
-    "url": "https://www.amazon.com/CVLIFE-Illuminated-Optical-Riflescope-Mil-dot/dp/B0D59LWTM2/ref=sr_1_23",
-    "series": "Standard",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Mil-Dot",
-      "description": "Military standard reticle with dots spaced at 1 mil intervals for range estimation.",
-      "svgPath": "M50,0 V100 M0,50 H100 M48,48 h4 v4 h-4 z M35,50 h4 v4 h-4 z M65,50 h4 v4 h-4 z"
-    }
-  },
-  "amazon-sig-sauer-tango-spr-6-24x52mm-30mm-tube-second-focal-planesfpf2-shockproof-waterproof-fogproof-tactical-riflescope-moa-bdc-1-reticle-flip-back-caps-throw-lever-included-sots46000-24": {
+  "amazon-sig-sauer-tango-spr-6-24x52mm-30mm-tube-second-focal-planesfpf2-shockproof-waterproof-fogproof-tactical-riflescope-moa-bdc-1-reticle-flip-back-caps-throw-lever-included-sots46000-5": {
     "minZoom": 6,
     "maxZoom": 24,
     "currentZoom": 6,
@@ -364,7 +670,7 @@
     "description": "Sig Sauer Tactical 6-24x52 riflescope",
     "manufacturer": "Sig Sauer",
     "price": "$204",
-    "url": "https://www.amazon.com/Tango-SPR-6-24x52mm-Shockproof-Waterproof-Riflescope/dp/B0F6NRJCRQ/ref=sr_1_25",
+    "url": "https://www.amazon.com/Tango-SPR-6-24x52mm-Shockproof-Waterproof-Riflescope/dp/B0F6NRJCRQ/ref=sr_1_6",
     "series": "Tactical",
     "objectiveLens": 52,
     "reticle": {
@@ -373,185 +679,117 @@
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
     }
   },
-  "amazon-simmons-pro-rimfire-3-9x32mm-riflescope-27": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "Simmons PRO RIMFIRE 3-9X32MM RIFLESCOPE",
-    "description": "Simmons Standard 3-9x32 riflescope",
-    "manufacturer": "Simmons",
-    "price": "$52",
-    "url": "https://www.amazon.com/Simmons-PRO-RIMFIRE-3-9X32MM-RIFLESCOPE/dp/B0D3VCFB99/ref=sr_1_28",
-    "series": "Standard",
-    "objectiveLens": 32,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-simmons-8-point-3-9x50mm-rifle-scope-with-truplex-reticle-29": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "Simmons 8-Point 3-9x50mm Rifle Scope with Truplex Reticle",
-    "description": "Simmons Standard 3-9x50 riflescope",
-    "manufacturer": "Simmons",
-    "price": "$45",
-    "url": "https://www.amazon.com/Simmons-8-Point-3-9x50mm-Truplex-Reticle/dp/B000JJL8VW/ref=sr_1_30",
-    "series": "Standard",
-    "objectiveLens": 50,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-bushnell-banner-3-9x40mm-riflescope-dusk-dawn-hunting-riflescope-with-multi-x-reticle-30": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "Bushnell Banner 3-9x40mm Riflescope, Dusk & Dawn Hunting Riflescope with Multi-X Reticle",
-    "description": "Bushnell Standard 3-9x40 riflescope",
-    "manufacturer": "Bushnell",
-    "price": "$79",
-    "url": "https://www.amazon.com/Bushnell-Multi-X-Reticle-Riflescope-3-3-Inch/dp/B00IYHGAQO/ref=sr_1_31",
-    "series": "Standard",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-svbony-sv28-spotting-scopes-with-tripod-angled-25-75x70mm-spotter-scope-with-phone-adapter-waterproof-fogproof-spotting-scope-for-bird-watching-target-shooting-wildlife-viewing-32": {
-    "minZoom": 25,
-    "maxZoom": 75,
-    "currentZoom": 25,
-    "model": "SVBONY SV28 Spotting Scopes with Tripod, Angled 25-75x70mm Spotter Scope with Phone Adapter, Waterproof Fogproof Spotting Scope for Bird Watching, Target Shooting, Wildlife Viewing",
-    "description": "SVBONY Standard 25-75x70 riflescope",
-    "manufacturer": "SVBONY",
-    "price": "$47",
-    "url": "https://www.amazon.com/SVBONY-Spotting-Telescope-25-75x70mm-Birdwatching/dp/B0728C4K7W/ref=sr_1_33",
-    "series": "Standard",
-    "objectiveLens": 70,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-cvlife-4x32-prism-tactical-rifle-scope-red-green-blue-illuminated-reticle-scope-with-fiber-optic-sight-33": {
-    "minZoom": 4,
-    "maxZoom": 4,
-    "currentZoom": 4,
-    "model": "CVLIFE 4x32 Prism Tactical Rifle Scope Red & Green & Blue Illuminated Reticle Scope with Fiber Optic Sight",
-    "description": "CVLIFE Tactical 4x32 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$53",
-    "url": "https://www.amazon.com/CVLIFE-Tactical-Rifle-Illuminated-Reticle/dp/B01GHSY0SQ/ref=sr_1_34",
-    "series": "Tactical",
-    "objectiveLens": 32,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-kasente-1x40-red-green-dot-sight-rifle-scope-with-20mm-11mm-picatinny-dovetail-rail-mount-37": {
-    "minZoom": 1,
-    "maxZoom": 1,
-    "currentZoom": 1,
-    "model": "KASENTE 1x40 Red Green Dot Sight Rifle Scope with 20mm / 11mm Picatinny Dovetail Rail Mount",
-    "description": "KASENTE Standard 1x40 riflescope",
-    "manufacturer": "KASENTE",
-    "price": "$19",
-    "url": "https://www.amazon.com/Generic-Green-Tactical-1x40mm-Hunting/dp/B0CXHWC5WW/ref=sr_1_38",
-    "series": "Standard",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-bushnell-trs-26-1x26-red-dot-scope-reflex-red-dot-sight-with-3-moa-and-50000-hours-of-battery-life-39": {
-    "minZoom": 1,
-    "maxZoom": 1,
-    "currentZoom": 1,
-    "model": "Bushnell TRS-26 1x26 Red Dot Scope, Reflex Red Dot Sight with 3 MOA and 50,000 Hours of Battery Life",
-    "description": "Bushnell Standard 1x26 riflescope",
-    "manufacturer": "Bushnell",
-    "price": "$110",
-    "url": "https://www.amazon.com/Bushnell-TRS-26-Scope-Reflex-Battery/dp/B07C39YLT3/ref=sr_1_40",
-    "series": "Standard",
-    "objectiveLens": 26,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-cvlife-4-16x44-scope-red-and-green-illuminated-scope-with-locking-turret-sunshade-and-mount-included-40": {
+  "amazon-sig-sauer-tango-spr-4-16x44mm-30mm-tube-second-focal-planesfpf2-shockproof-waterproof-fogproof-tactical-riflescope-moa-bdc-1-reticle-spr-scope-mount-flip-back-caps-included-sots44000-9": {
     "minZoom": 4,
     "maxZoom": 16,
     "currentZoom": 4,
-    "model": "CVLIFE 4-16x44 Scope Red and Green Illuminated Scope with Locking Turret Sunshade and Mount Included",
-    "description": "CVLIFE Standard 4-16x44 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$53",
-    "url": "https://www.amazon.com/CVLIFE-Tactical-Illuminated-Sunshade-Included/dp/B0727V92T4/ref=sr_1_41",
-    "series": "Standard",
+    "model": "SIG SAUER Tango-SPR 4-16x44mm 30mm Tube Second Focal Plane/SFP/F2 Shockproof Waterproof Fogproof Tactical Riflescope | MOA BDC-1 Reticle, SPR Scope Mount, Flip-Back Caps Included, SOTS44000",
+    "description": "Sig Sauer Tactical 4-16x44 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$177",
+    "url": "https://www.amazon.com/Tango-SPR-4-16x44mm-Shockproof-Waterproof-Riflescope/dp/B0F4SNWFT5/ref=sr_1_10",
+    "series": "Tactical",
     "objectiveLens": 44,
     "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+      "type": "BDC",
+      "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
     }
   },
-  "amazon-cvlife-25-10x40e-red-green-illuminated-scope-with-20mm-mount-41": {
-    "minZoom": 2.5,
-    "maxZoom": 10,
-    "currentZoom": 2.5,
-    "model": "CVLIFE 2.5-10x40e Red & Green Illuminated Scope with 20mm Mount",
-    "description": "CVLIFE Standard 2.5-10x40 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$49",
-    "url": "https://www.amazon.com/CVLIFE-2-5-10x40e-Green-Illuminated-Scope/dp/B00PRVLMK4/ref=sr_1_42",
+  "amazon-rifle-scope-10-40x56-34mm-tube-high-resolution-for-long-range-shooting-up-to-4000-meter-ipx7-waterproof-shock-proof-223-308-338-3006-45-durable-and-accurate-10": {
+    "minZoom": 10,
+    "maxZoom": 40,
+    "currentZoom": 10,
+    "model": "Rifle Scope 10-40X56, 34mm Tube, High Resolution for Long Range Shooting up to 4000 Meter, IPX7 Waterproof & Shock Proof .223, 308, 338, 3006, .45, Durable and Accurate",
+    "description": "Rifle Standard 10-40x56 riflescope",
+    "manufacturer": "Rifle",
+    "price": "$299",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
     "series": "Standard",
-    "objectiveLens": 40,
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-cvlife-eagleblaze-5-25x56-ffp-rifle-scope---ed-glass-zero-stop-illuminated-reticle-side-parallax-adjustment---first-focal-plane---long-range-rifle-scope-for-hunting---34mm-tube-12": {
+    "minZoom": 5,
+    "maxZoom": 25,
+    "currentZoom": 5,
+    "model": "CVLIFE EagleBlaze 5-25x56 FFP Rifle Scope - ED Glass, Zero Stop, Illuminated Reticle, Side Parallax Adjustment - First Focal Plane - Long Range Rifle Scope for Hunting - 34mm Tube",
+    "description": "CVLIFE Standard 5-25x56 riflescope",
+    "manufacturer": "CVLIFE",
+    "price": "$299",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
+    "series": "Standard",
+    "objectiveLens": 56,
     "reticle": {
       "type": "Illuminated",
       "description": "Illuminated reticle for low-light conditions.",
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
     }
   },
-  "amazon-cvlife-2-10x32-mpvo-ao-rifle-scope-with-locking-turret-5-levels-red-green-illuminated-reticle-parallax-adjustment-second-focal-plane-30mm-offset-scope-mount-42": {
-    "minZoom": 2,
-    "maxZoom": 10,
-    "currentZoom": 2,
-    "model": "CVLIFE 2-10x32 MPVO AO Rifle Scope with Locking Turret, 5 Levels Red & Green Illuminated Reticle, Parallax Adjustment, Second Focal Plane, 30mm Offset Scope Mount",
-    "description": "CVLIFE Standard 2-10x32 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$95",
-    "url": "https://www.amazon.com/CVLIFE-2-10x32-Illuminated-Parallax-Adjustment/dp/B0DQTRYWJW/ref=sr_1_43",
+  "amazon-rifle-scope-6-24x52-34mm-tube-high-resolution-for-long-range-shooting-up-to-4000-meter-ffp-ipx7-waterproof-shock-proof-of-223-308-338-3006-45-50-durable-and-accurate-13": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Rifle Scope 6-24X52, 34mm Tube, High Resolution for Long Range Shooting up to 4000 Meter, FFP, IPX7 Waterproof & Shock Proof of .223, 308, 338, 3006, .45, .50, Durable and Accurate",
+    "description": "Rifle Standard 6-24x52 riflescope",
+    "manufacturer": "Rifle",
+    "price": "$309",
+    "url": "https://www.amazon.com/s?k=rifle+scope",
     "series": "Standard",
-    "objectiveLens": 32,
+    "objectiveLens": 52,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-arken-optics-ep5-gen-2-7-35x56-ffp-long-range-precision-rifle-scope-with-illuminated-vpr-reticle-zero-stop-and-34mm-tube-14": {
+    "minZoom": 7,
+    "maxZoom": 35,
+    "currentZoom": 7,
+    "model": "Arken Optics EP5 Gen 2 7-35x56 FFP Long Range Precision Rifle Scope with Illuminated VPR Reticle, Zero Stop and 34mm Tube",
+    "description": "Arken Standard 7-35x56 riflescope",
+    "manufacturer": "Arken",
+    "price": "$551",
+    "url": "https://www.amazon.com/Arken-Optics-7-35x56-Precision-Illuminated/dp/B0DTK84S19/ref=sr_1_15",
+    "series": "Standard",
+    "objectiveLens": 56,
     "reticle": {
       "type": "Illuminated",
       "description": "Illuminated reticle for low-light conditions.",
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
     }
   },
-  "amazon-bushnell-banner-3-9x50mm-riflescope-dusk-dawn-hunting-riflescope-with-multi-x-reticle-43": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "Bushnell Banner 3-9x50mm Riflescope, Dusk & Dawn Hunting Riflescope with Multi-X Reticle",
-    "description": "Bushnell Standard 3-9x50 riflescope",
-    "manufacturer": "Bushnell",
-    "price": "$83",
-    "url": "https://www.amazon.com/Bushnell-Banner-Multi-X-Reticle-Riflescope/dp/B00J2RGBIW/ref=sr_1_44",
+  "amazon-vortex-optics-copperhead-second-focal-plane-riflescope-copperhead-hd-10x42-binoculars-bundle-16": {
+    "minZoom": 10,
+    "maxZoom": 10,
+    "currentZoom": 10,
+    "model": "Vortex Optics Copperhead Second Focal Plane Riflescope & Copperhead HD 10x42 Binoculars Bundle",
+    "description": "Vortex Standard 10x42 riflescope",
+    "manufacturer": "Vortex",
+    "price": "$199",
+    "url": "https://www.amazon.com/Vortex-Copperhead-4-12x44-Riflescope-Binoculars/dp/B0CGBK9XXX/ref=sr_1_17",
+    "series": "Standard",
+    "objectiveLens": 42,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-hornet-4-16x50-ffp-rifle-scope-includes-zero-stop-scope-level-and-detachable-sunshade-17": {
+    "minZoom": 4,
+    "maxZoom": 16,
+    "currentZoom": 4,
+    "model": "Monstrum Hornet 4-16x50 FFP Rifle Scope | Includes Zero Stop, Scope Level, and Detachable Sunshade",
+    "description": "Monstrum Standard 4-16x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$159",
+    "url": "https://www.amazon.com/Monstrum-4-16x50-Detachable-Sunshade-Reticle/dp/B0D7NCDFKR/ref=sr_1_18",
     "series": "Standard",
     "objectiveLens": 50,
     "reticle": {
@@ -560,7 +798,7 @@
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
     }
   },
-  "amazon-sig-sauer-tango-msr-lpvo-1-10x28mm-34mm-tube-f2sfp-msr-bdc-10-reticle-durable-scockproof-waterproof-fogproof-hunting-rifle-scope-alpha-msr-mount-lens-covers-throw-lever-included-44": {
+  "amazon-sig-sauer-tango-msr-lpvo-1-10x28mm-34mm-tube-f2sfp-msr-bdc-10-reticle-durable-scockproof-waterproof-fogproof-hunting-rifle-scope-alpha-msr-mount-lens-covers-throw-lever-included-23": {
     "minZoom": 1,
     "maxZoom": 10,
     "currentZoom": 1,
@@ -568,7 +806,7 @@
     "description": "Sig Sauer Standard 1-10x28 riflescope",
     "manufacturer": "Sig Sauer",
     "price": "$429",
-    "url": "https://www.amazon.com/Sig-Sauer-Tango-MSR-1-10x28mm-Rifle/dp/B0C8KH2RQP/ref=sr_1_45",
+    "url": "https://www.amazon.com/Sig-Sauer-Tango-MSR-1-10x28mm-Rifle/dp/B0C8KH2RQP/ref=sr_1_24",
     "series": "Standard",
     "objectiveLens": 28,
     "reticle": {
@@ -577,84 +815,16 @@
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
     }
   },
-  "amazon-sig-sauer-buckmasters-3-9x40mm-1-tube-second-focal-planesfpf2-durable-shockproof-waterproof-fogproof-black-riflescope-45": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "SIG SAUER Buckmasters 3-9x40mm 1\" Tube Second Focal Plane/SFP/F2 Durable Shockproof Waterproof Fogproof Black Riflescope",
-    "description": "Sig Sauer Standard 3-9x40 riflescope",
-    "manufacturer": "Sig Sauer",
-    "price": "$92",
-    "url": "https://www.amazon.com/Sig-Sauer-SOBM33001-BUCKMASTERS-3-9x40MM/dp/B08TRTHFVV/ref=sr_1_46",
-    "series": "Standard",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-pinty-rifle-scope-red-dot-laser-combo---4in1-gun-set-3-9x32-illuminated-hunting-scope-green-or-red-dot-red-laser-sight-pic-riser-mount---tactical-46": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "PINTY Rifle Scope Red Dot Laser Combo - 4in1 Gun Set: 3-9x32 Illuminated Hunting Scope, Green or Red Dot, Red Laser Sight, Pic Riser Mount - Tactical",
-    "description": "PINTY Tactical 3-9x32 riflescope",
-    "manufacturer": "PINTY",
-    "price": "$89",
-    "url": "https://www.amazon.com/PINTY-Rifle-Scope-Laser-Combo/dp/B01NBRI1DP/ref=sr_1_47",
-    "series": "Tactical",
-    "objectiveLens": 32,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-cvlife-eaglefeather-4-16x44-side-focus-parallax-rifle-scope-for-hunting-illuminated-mil-dot-reticle-30mm-tube-long-range-scope-second-focal-plane-riflescope-48": {
-    "minZoom": 4,
-    "maxZoom": 16,
-    "currentZoom": 4,
-    "model": "CVLIFE EagleFeather 4-16X44 Side Focus Parallax Rifle Scope for Hunting, Illuminated Mil-Dot Reticle, 30mm Tube Long Range Scope, Second Focal Plane Riflescope",
-    "description": "CVLIFE Standard 4-16x44 riflescope",
-    "manufacturer": "CVLIFE",
-    "price": "$89",
-    "url": "https://www.amazon.com/CVLIFE-EagleFeather-Parallax-Illuminated-Riflescope/dp/B0CBMHCWLP/ref=sr_1_49",
-    "series": "Standard",
-    "objectiveLens": 44,
-    "reticle": {
-      "type": "Mil-Dot",
-      "description": "Military standard reticle with dots spaced at 1 mil intervals for range estimation.",
-      "svgPath": "M50,0 V100 M0,50 H100 M48,48 h4 v4 h-4 z M35,50 h4 v4 h-4 z M65,50 h4 v4 h-4 z"
-    }
-  },
-  "amazon-sniper-mt-4-12x50-aol-rifle-scope-with-redgreenblue-illuminated-reticle-riflescope-adjustable-objective-mt4-12x50aol-49": {
-    "minZoom": 4,
-    "maxZoom": 12,
-    "currentZoom": 4,
-    "model": "SNIPER MT 4-12x50 AOL Rifle Scope with Red/Green/Blue Illuminated Reticle Riflescope, Adjustable Objective (MT4-12x50AOL)",
-    "description": "SNIPER Standard 4-12x50 riflescope",
-    "manufacturer": "SNIPER",
-    "price": "$69",
-    "url": "https://www.amazon.com/6-24x50-Illuminated-Riflescope-Adjustable-Objective/dp/B0BQZGGBF1/ref=sr_1_50",
-    "series": "Standard",
-    "objectiveLens": 50,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-leupold-mark-4hd-8-32x56-34mm-focus-ffp-riflescope-50": {
+  "amazon-athlon-optics-argos-btr-gen2-8-34x56-first-focal-plane-riflescopes-26": {
     "minZoom": 8,
-    "maxZoom": 32,
+    "maxZoom": 34,
     "currentZoom": 8,
-    "model": "Leupold Mark 4HD 8-32x56 (34mm) Focus FFP Riflescope",
-    "description": "Leupold Mark 8-32x56 riflescope",
-    "manufacturer": "Leupold",
-    "price": "$1",
-    "url": "https://www.amazon.com/Leupold-8-32x56-Focus-PR2-MOA-Riflescope/dp/B0CS3TQ2N4/ref=sr_1_51",
-    "series": "Mark",
+    "model": "Athlon Optics Argos BTR GEN2 8-34X56 First Focal Plane Riflescopes",
+    "description": "Athlon Standard 8-34x56 riflescope",
+    "manufacturer": "Athlon",
+    "price": "$280",
+    "url": "https://www.amazon.com/Athlon-Optics-Argos-8-34X56-Riflescope/dp/B08296719H/ref=sr_1_27",
+    "series": "Standard",
     "objectiveLens": 56,
     "reticle": {
       "type": "Duplex",
@@ -662,92 +832,24 @@
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
     }
   },
-  "amazon-leupold-vx-freedom-3-9x40mm-riflescope-51": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "Leupold VX-Freedom 3-9x40mm Riflescope",
-    "description": "Leupold VX-Freedom 3-9x40 riflescope",
-    "manufacturer": "Leupold",
-    "price": "$296",
-    "url": "https://www.amazon.com/Leupold-VX-Freedom-3-9x40mm-Riflescope/dp/B08QSKGZPL/ref=sr_1_52",
-    "series": "VX-Freedom",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-leupold-mark-5hd-5-25x56-35mm-m5c3-ffp-riflescope-52": {
-    "minZoom": 5,
-    "maxZoom": 25,
-    "currentZoom": 5,
-    "model": "Leupold Mark 5HD 5-25x56 (35mm) M5C3 FFP Riflescope",
-    "description": "Leupold Mark 5-25x56 riflescope",
-    "manufacturer": "Leupold",
-    "price": "$2",
-    "url": "https://www.amazon.com/Leupold-5-25x56-PR2-MIL-Earth-Riflescope/dp/B0CT3Q5VJH/ref=sr_1_53",
-    "series": "Mark",
-    "objectiveLens": 56,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-uuq-4-16x44ao-rifle-scope-fits-11mm-20mm-mounts-for-hunting-with-locking-turret-sunshadesfprgb-illuminationmil-dot-reticlefront-parallax-adjustment-long-range-optics-53": {
+  "amazon-sig-sauer-buckmasters-4-16x44mm-30mm-tube-diameter-f2-second-focal-plane-riflescope---durable-waterproof-fogproof-hunting-rifle-scope-with-buckmasters-bdc-reticle-27": {
     "minZoom": 4,
     "maxZoom": 16,
     "currentZoom": 4,
-    "model": "UUQ 4-16X44AO Rifle Scope Fits 11mm /20mm Mounts, for Hunting with Locking Turret Sunshade,SFP,R/G/B Illumination,Mil-dot Reticle,Front Parallax Adjustment,-Long Range Optics",
-    "description": "UUQ Standard 4-16x44 riflescope",
-    "manufacturer": "UUQ",
-    "price": "$55",
-    "url": "https://www.amazon.com/UUQ-4-16X44AO-Illumination-Adjustment-Mounts-Long/dp/B0CZRQDHRJ/ref=sr_1_54",
+    "model": "SIG SAUER Buckmasters 4-16x44mm 30mm Tube Diameter F2 / Second Focal Plane Riflescope - Durable Waterproof Fogproof Hunting Rifle Scope with Buckmasters BDC Reticle",
+    "description": "Sig Sauer Standard 4-16x44 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$163",
+    "url": "https://www.amazon.com/Waterproof-Fogproof-Diameter-4-16x44mm-Buckmasters/dp/B09W3WR9KW/ref=sr_1_28",
     "series": "Standard",
     "objectiveLens": 44,
     "reticle": {
-      "type": "Mil-Dot",
-      "description": "Military standard reticle with dots spaced at 1 mil intervals for range estimation.",
-      "svgPath": "M50,0 V100 M0,50 H100 M48,48 h4 v4 h-4 z M35,50 h4 v4 h-4 z M65,50 h4 v4 h-4 z"
+      "type": "BDC",
+      "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
     }
   },
-  "amazon-bushnell-legend-3-9x40mm-illuminated-riflescope-hunting-rifle-scope-with-illuminated-multi-x-reticle-55": {
-    "minZoom": 3,
-    "maxZoom": 9,
-    "currentZoom": 3,
-    "model": "Bushnell Legend 3-9x40mm Illuminated Riflescope, Hunting Rifle Scope with Illuminated Multi-X Reticle",
-    "description": "Bushnell Standard 3-9x40 riflescope",
-    "manufacturer": "Bushnell",
-    "price": "$96",
-    "url": "https://www.amazon.com/Bushnell-3-9x40mm-Illuminated-Riflescope-Hunting/dp/B0BW3ZWQBP/ref=sr_1_56",
-    "series": "Standard",
-    "objectiveLens": 40,
-    "reticle": {
-      "type": "Illuminated",
-      "description": "Illuminated reticle for low-light conditions.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
-    }
-  },
-  "amazon-sig-sauer-tango-msr-3-18x50mm-34mm-tube-f1first-focal-plane-high-magnification-durable-shockproof-waterproof-fogproof-black-hunting-riflescope-lens-covers-34mm-alpha-msr-1300-mount-included-56": {
-    "minZoom": 3,
-    "maxZoom": 18,
-    "currentZoom": 3,
-    "model": "SIG SAUER Tango-MSR 3-18X50mm 34mm Tube F1/First Focal Plane High-Magnification Durable Shockproof Waterproof Fogproof Black Hunting Riflescope, Lens Covers & 34mm Alpha-MSR 1.300\" Mount Included",
-    "description": "Sig Sauer Standard 3-18x50 riflescope",
-    "manufacturer": "Sig Sauer",
-    "price": "$549",
-    "url": "https://www.amazon.com/Tango-MSR-3-18X50mm-High-Magnification-Waterproof-Hunting/dp/B09HCRY2YQ/ref=sr_1_57",
-    "series": "Standard",
-    "objectiveLens": 50,
-    "reticle": {
-      "type": "Duplex",
-      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
-      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
-    }
-  },
-  "amazon-agm-rattler-ts19-256-thermal-imaging-riflescope-12um-256x192-57": {
+  "amazon-agm-rattler-ts19-256-thermal-imaging-riflescope-12um-256x192-29": {
     "minZoom": 256,
     "maxZoom": 256,
     "currentZoom": 256,
@@ -755,7 +857,7 @@
     "description": "AGM Standard 256x192 riflescope",
     "manufacturer": "AGM",
     "price": "$713",
-    "url": "https://www.amazon.com/AGM-Rattler-Riflescope-Transmission-Activities/dp/B09LWRC4GZ/ref=sr_1_58",
+    "url": "https://www.amazon.com/AGM-Rattler-Riflescope-Transmission-Activities/dp/B09LWRC4GZ/ref=sr_1_30",
     "series": "Standard",
     "objectiveLens": 192,
     "reticle": {
@@ -764,7 +866,228 @@
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
     }
   },
-  "amazon-sig-sauer-tango-msr-lpvo-1-8x24mm-30mm-maintube-sfp-riflescope---shockproof-waterproof-fogproof-hunting-rifle-scope-with-illuminated-msr-bdc-8-reticle---lens-covers-cantilever-mount-included-59": {
+  "amazon-leupold-vx-freedom-3-9x40mm-riflescope-31": {
+    "minZoom": 3,
+    "maxZoom": 9,
+    "currentZoom": 3,
+    "model": "Leupold VX-Freedom 3-9x40mm Riflescope",
+    "description": "Leupold VX-Freedom 3-9x40 riflescope",
+    "manufacturer": "Leupold",
+    "price": "$299",
+    "url": "https://www.amazon.com/Leupold-VX-Freedom-3-9x40mm-Riflescope/dp/B08QSKGZPL/ref=sr_1_32",
+    "series": "VX-Freedom",
+    "objectiveLens": 40,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-beast-6-24x50-ffp-rifle-scope-featuring-ed-glass-adjustable-objective-precision-turrets-with-zero-stop-daylight-bright-reticle-and-anti-cant-scope-rings-33": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Monstrum Beast 6-24x50 FFP Rifle Scope | Featuring ED Glass, Adjustable Objective, Precision Turrets with Zero Stop, Daylight Bright Reticle, and Anti-Cant Scope Rings",
+    "description": "Monstrum Standard 6-24x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$219",
+    "url": "https://www.amazon.com/Monstrum-Featuring-Adjustable-Objective-Precision/dp/B0DWVDHRCV/ref=sr_1_34",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-banshee-ed-1-10x24-lpvo-rifle-scope-with-offset-scope-mount-36": {
+    "minZoom": 1,
+    "maxZoom": 10,
+    "currentZoom": 1,
+    "model": "Monstrum Banshee ED 1-10x24 LPVO Rifle Scope with Offset Scope Mount",
+    "description": "Monstrum Standard 1-10x24 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$159",
+    "url": "https://www.amazon.com/Monstrum-Banshee-1-10x24-Rifle-Offset/dp/B0C3G8S6XX/ref=sr_1_37",
+    "series": "Standard",
+    "objectiveLens": 24,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-hornet-6-24x50-ffp-rifle-scope-includes-zero-stop-scope-level-and-detachable-sunshade-37": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Monstrum Hornet 6-24x50 FFP Rifle Scope | Includes Zero Stop, Scope Level, and Detachable Sunshade",
+    "description": "Monstrum Standard 6-24x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$169",
+    "url": "https://www.amazon.com/Monstrum-Hornet-6-24x50-Detachable-Sunshade/dp/B0CQD8WK8F/ref=sr_1_38",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-tango-spr-lpvo-1-4x24mm-30mm-tube-second-focal-planesfpf2-shockproof-waterproof-fogproof-tactical-scope-hellfire-illuminated-fl-4-reticle-flip-back-caps-included-sots41000-38": {
+    "minZoom": 1,
+    "maxZoom": 4,
+    "currentZoom": 1,
+    "model": "SIG SAUER Tango-SPR LPVO 1-4x24mm 30mm Tube Second Focal Plane/SFP/F2 Shockproof Waterproof Fogproof Tactical Scope| Hellfire Illuminated FL-4 Reticle, Flip-Back Caps Included, SOTS41000",
+    "description": "Sig Sauer Tactical 1-4x24 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$171",
+    "url": "https://www.amazon.com/Tango-SPR-Shockproof-Waterproof-Illuminated-Flip-Back/dp/B0F6TL2DS6/ref=sr_1_39",
+    "series": "Tactical",
+    "objectiveLens": 24,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-vortex-optics-venom-1-6x24-second-focal-plane-riflescope-39": {
+    "minZoom": 1,
+    "maxZoom": 6,
+    "currentZoom": 1,
+    "model": "Vortex Optics Venom 1-6x24 Second Focal Plane Riflescope",
+    "description": "Vortex Standard 1-6x24 riflescope",
+    "manufacturer": "Vortex",
+    "price": "$299",
+    "url": "https://www.amazon.com/Vortex-Optics-1-6x24-Second-Riflescope/dp/B0CPPDFDD3/ref=sr_1_40",
+    "series": "Standard",
+    "objectiveLens": 24,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-argos-btr-gen2-6-24x50-first-focal-plane-riflescopes-40": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Argos BTR GEN2 6-24X50 First Focal Plane Riflescopes",
+    "description": "Argos Standard 6-24x50 riflescope",
+    "manufacturer": "Argos",
+    "price": "$250",
+    "url": "https://www.amazon.com/Athlon-Optics-Argos-6-24X50-Riflescope/dp/B082972C5G/ref=sr_1_41",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-tango-msr-3-18x50mm-34mm-tube-f1first-focal-plane-high-magnification-durable-shockproof-waterproof-fogproof-black-hunting-riflescope-lens-covers-34mm-alpha-msr-1300-mount-included-42": {
+    "minZoom": 3,
+    "maxZoom": 18,
+    "currentZoom": 3,
+    "model": "SIG SAUER Tango-MSR 3-18X50mm 34mm Tube F1/First Focal Plane High-Magnification Durable Shockproof Waterproof Fogproof Black Hunting Riflescope, Lens Covers & 34mm Alpha-MSR 1.300\" Mount Included",
+    "description": "Sig Sauer Standard 3-18x50 riflescope",
+    "manufacturer": "Sig Sauer",
+    "price": "$549",
+    "url": "https://www.amazon.com/Tango-MSR-3-18X50mm-High-Magnification-Waterproof-Hunting/dp/B09HCRY2YQ/ref=sr_1_43",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-challenger-5-30x56-ffp-rifle-scope-featuring-ed-glass-adjustable-objective-precision-turrets-with-zero-stop-daylight-bright-reticle-and-anti-cant-scope-rings-44": {
+    "minZoom": 5,
+    "maxZoom": 30,
+    "currentZoom": 5,
+    "model": "Monstrum Challenger 5-30x56 FFP Rifle Scope | Featuring ED Glass, Adjustable Objective, Precision Turrets with Zero Stop, Daylight Bright Reticle, and Anti-Cant Scope Rings",
+    "description": "Monstrum Standard 5-30x56 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$179",
+    "url": "https://www.amazon.com/Monstrum-Challenger-Featuring-Adjustable-Objective/dp/B0DP42Z6X2/ref=sr_1_45",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-monstrum-g3-6-24x50-first-focal-plane-ffp-rifle-scope-with-illuminated-moa-reticle-and-adjustable-objective-45": {
+    "minZoom": 6,
+    "maxZoom": 24,
+    "currentZoom": 6,
+    "model": "Monstrum G3 6-24x50 First Focal Plane FFP Rifle Scope with Illuminated MOA Reticle and Adjustable Objective",
+    "description": "Monstrum Standard 6-24x50 riflescope",
+    "manufacturer": "Monstrum",
+    "price": "$249",
+    "url": "https://www.amazon.com/Monstrum-Tactical-Illuminated-Adjustable-Objective/dp/B07GRL39JS/ref=sr_1_46",
+    "series": "Standard",
+    "objectiveLens": 50,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-hd-5-30x56-prs-rifle-optics-first-focal-planeffp-rifle-scopered-illuminated-reticlezero-stop-34mm-tube-47": {
+    "minZoom": 5,
+    "maxZoom": 30,
+    "currentZoom": 5,
+    "model": "HD 5-30x56 PRS Rifle Optics, First Focal Plane,FFP Rifle Scope,Red Illuminated Reticle,Zero Stop 34mm Tube",
+    "description": "HD Standard 5-30x56 riflescope",
+    "manufacturer": "HD",
+    "price": "$279",
+    "url": "https://www.amazon.com/DISCOVERYOPT-5-30x56-Illuminated-Reticle-Hunting/dp/B0BZS8FPKC/ref=sr_1_48",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-optics-ed-gen-ii-5-25x56mm-prs-rifle-scope-ffp-illuminated-reticle-with-zero-stop-34mm-tube-48": {
+    "minZoom": 5,
+    "maxZoom": 25,
+    "currentZoom": 5,
+    "model": "Optics ED GEN-II 5-25x56mm PRS Rifle Scope FFP, Illuminated Reticle with Zero Stop 34mm Tube",
+    "description": "Optics Standard 5-25x56 riflescope",
+    "manufacturer": "Optics",
+    "price": "$359",
+    "url": "https://www.amazon.com/DISCOVERYOPT-5-25x56mm-Illuminated-Reticle-ED5-25x56MOA/dp/B0DRCHJLB9/ref=sr_1_49",
+    "series": "Standard",
+    "objectiveLens": 56,
+    "reticle": {
+      "type": "Illuminated",
+      "description": "Illuminated reticle for low-light conditions.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M48,48 h4 v4 h-4 z"
+    }
+  },
+  "amazon-leupold-vx-freedom-2-7x33-1-inch-hunt-plex-reticle-riflescope-50": {
+    "minZoom": 2,
+    "maxZoom": 7,
+    "currentZoom": 2,
+    "model": "Leupold VX-Freedom 2-7x33 (1 inch) Hunt-Plex Reticle Riflescope",
+    "description": "Leupold VX-Freedom 2-7x33 riflescope",
+    "manufacturer": "Leupold",
+    "price": "$299",
+    "url": "https://www.amazon.com/Leupold-180592-VX-Freedom-2-7x33mm-Riflescope/dp/B08QSLLV8C/ref=sr_1_51",
+    "series": "VX-Freedom",
+    "objectiveLens": 33,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
+    }
+  },
+  "amazon-sig-sauer-tango-msr-lpvo-1-8x24mm-30mm-maintube-sfp-riflescope---shockproof-waterproof-fogproof-hunting-rifle-scope-with-illuminated-msr-bdc-8-reticle---lens-covers-cantilever-mount-included-54": {
     "minZoom": 1,
     "maxZoom": 8,
     "currentZoom": 1,
@@ -772,13 +1095,30 @@
     "description": "Sig Sauer Standard 1-8x24 riflescope",
     "manufacturer": "Sig Sauer",
     "price": "$429",
-    "url": "https://www.amazon.com/SAUER-Tango-MSR-1-8x24mm-Maintube-Riflescope/dp/B0C8K172LQ/ref=sr_1_60",
+    "url": "https://www.amazon.com/SAUER-Tango-MSR-1-8x24mm-Maintube-Riflescope/dp/B0C8K172LQ/ref=sr_1_55",
     "series": "Standard",
     "objectiveLens": 24,
     "reticle": {
       "type": "BDC",
       "description": "Bullet Drop Compensation reticle for quick holdovers at known distances.",
       "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100 M50,70 h4 M50,80 h4 M50,90 h4"
+    }
+  },
+  "amazon-atn-thor-ltv-ultra-light-thermal-hunting-scope-4k-4056x3040-thermal-sensor-4k-video-record-one-shot-zero-10h-battery-power-57": {
+    "minZoom": 4056,
+    "maxZoom": 4056,
+    "currentZoom": 4056,
+    "model": "ATN Thor LTV Ultra Light Thermal Hunting Scope, 4K+ 4056x3040 Thermal Sensor, 4K Video Record, One Shot Zero, 10h+ Battery Power",
+    "description": "ATN Standard 4056x3040 riflescope",
+    "manufacturer": "ATN",
+    "price": "$861",
+    "url": "https://www.amazon.com/ATN-160x120-Micron-Thermal-Recording/dp/B0BQ77LLR5/ref=sr_1_58",
+    "series": "Standard",
+    "objectiveLens": 3040,
+    "reticle": {
+      "type": "Duplex",
+      "description": "Classic crosshair design with thicker outer posts that taper to a fine center.",
+      "svgPath": "M50,0 V40 M50,60 V100 M0,50 H40 M60,50 H100"
     }
   }
 }

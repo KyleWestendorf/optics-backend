@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import { Scope } from '../models/scope.model';
 
-const AMAZON_SEARCH_URL = 'https://www.amazon.com/s?k=rifle+scope&ref=sr_pg_1';
+const AMAZON_SEARCH_URL = 'https://www.amazon.com/s?k=rifle+scope&rh=p_36%3A15000-&ref=sr_pg_1';
 
 // Basic reticle types for Amazon scopes (simplified)
 const BASIC_RETICLE_TYPES = {
@@ -27,7 +27,7 @@ const BASIC_RETICLE_TYPES = {
   }
 } as const;
 
-// Fallback data for when scraping fails
+// Fallback data for when scraping fails (only scopes $150+)
 const fallbackAmazonScopes: { [key: string]: Scope } = {
   'vortex-diamondback-tactical-6-24x50': {
     minZoom: 6,
@@ -52,6 +52,32 @@ const fallbackAmazonScopes: { [key: string]: Scope } = {
     price: '$199.99',
     url: 'https://www.amazon.com/dp/B07L9QKZX5',
     series: 'VX-Freedom',
+    objectiveLens: 40,
+    reticle: BASIC_RETICLE_TYPES['Duplex']
+  },
+  'vortex-viper-pst-gen-ii-5-25x50': {
+    minZoom: 5,
+    maxZoom: 25,
+    currentZoom: 5,
+    model: 'Vortex Viper PST Gen II 5-25x50 FFP',
+    description: 'High-performance tactical riflescope with first focal plane design',
+    manufacturer: 'Vortex',
+    price: '$599.99',
+    url: 'https://www.amazon.com/dp/B01MXUZ8XY',
+    series: 'Viper PST Gen II',
+    objectiveLens: 50,
+    reticle: BASIC_RETICLE_TYPES['Mil-Dot']
+  },
+  'leupold-vx-3i-3.5-10x40': {
+    minZoom: 3.5,
+    maxZoom: 10,
+    currentZoom: 3.5,
+    model: 'Leupold VX-3i 3.5-10x40 CDS',
+    description: 'Premium hunting riflescope with Custom Dial System',
+    manufacturer: 'Leupold',
+    price: '$399.99',
+    url: 'https://www.amazon.com/dp/B07K8QZXYZ',
+    series: 'VX-3i',
     objectiveLens: 40,
     reticle: BASIC_RETICLE_TYPES['Duplex']
   }
@@ -100,7 +126,6 @@ export async function scrapeAmazonScopes(): Promise<{ [key: string]: Scope }> {
           const titleElement = result.querySelector('h2 span') || result.querySelector('[data-cy="title-recipe"] span') || result.querySelector('.s-line-clamp-4 span');
           const priceElement = result.querySelector('.a-price-whole') || result.querySelector('.a-price .a-offscreen') || result.querySelector('.a-price-symbol');
           const linkElement = result.querySelector('h2 a') || result.querySelector('[data-cy="title-recipe"] a') as HTMLAnchorElement;
-          const imageElement = result.querySelector('.s-image') as HTMLImageElement;
           
           if (!titleElement || !linkElement) {
             console.log('Missing title or link element for result', index);
@@ -110,7 +135,6 @@ export async function scrapeAmazonScopes(): Promise<{ [key: string]: Scope }> {
           const title = titleElement.textContent?.trim() || '';
           const priceText = priceElement?.textContent?.trim() || '';
           const url = (linkElement as HTMLAnchorElement).href;
-          const imageUrl = imageElement?.src || '';
           
           console.log(`Processing item ${index}: ${title}`);
           
@@ -175,12 +199,21 @@ export async function scrapeAmazonScopes(): Promise<{ [key: string]: Scope }> {
           
           // Clean price - Amazon has complex price structure
           let formattedPrice = 'Price not available';
+          let priceValue = 0;
           if (priceText) {
             // Extract price from various Amazon price formats
             const priceMatch = priceText.match(/\$?(\d+(?:\.\d{2})?)/);
             if (priceMatch) {
+              priceValue = parseFloat(priceMatch[1]);
               formattedPrice = `$${priceMatch[1]}`;
             }
+          }
+          
+          // Skip items with unrealistic low prices (likely parsing errors)
+          // Amazon URL filter handles main $150+ filtering
+          if (priceValue > 0 && priceValue < 20) {
+            console.log(`Skipping ${title} - Unrealistic price $${priceValue} (likely parsing error)`);
+            return;
           }
           
           console.log(`Price extracted: ${formattedPrice}`);
