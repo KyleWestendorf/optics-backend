@@ -54,10 +54,12 @@ setupSwagger(app);
 const dataDir = path.join(__dirname, '../data');
 const scopesFilePath = path.join(dataDir, 'scopes.json');
 const amazonScopesFilePath = path.join(dataDir, 'amazon-scopes.json');
+const binocularsFilePath = path.join(dataDir, 'binoculars.json');
 
 // Initialize scopes data
 let scopesData: any = {};
 let amazonScopesData: any = {};
+let binocularsData: any = {};
 
 async function initializeData() {
   try {
@@ -74,6 +76,11 @@ async function initializeData() {
     // Try to read existing Amazon data
     if (existsSync(amazonScopesFilePath)) {
       amazonScopesData = JSON.parse(readFileSync(amazonScopesFilePath, 'utf-8'));
+    }
+
+    // Try to read existing Binoculars data
+    if (existsSync(binocularsFilePath)) {
+      binocularsData = JSON.parse(readFileSync(binocularsFilePath, 'utf-8'));
     }
 
     // If no Leupold data exists or the data is empty, trigger initial scrape
@@ -276,6 +283,78 @@ app.post('/api/amazon-scopes/refresh', async (req, res) => {
     res.json({ message: 'Amazon scope data updated successfully' });
   } catch (error) {
     res.status(500).json({ error: 'Failed to update Amazon scope data' });
+  }
+});
+
+/**
+ * @swagger
+ * /api/binoculars:
+ *   get:
+ *     summary: Get all binoculars
+ *     description: Returns a collection of all binoculars data
+ *     tags: [Binoculars]
+ *     responses:
+ *       200:
+ *         description: Successfully retrieved binoculars
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/BinocularCollection'
+ *       500:
+ *         description: Internal server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+app.get('/api/binoculars', async (req, res) => {
+  // If no data exists, try to read it first
+  if (Object.keys(binocularsData).length === 0) {
+    try {
+      await initializeData();
+    } catch (error) {
+      console.error('Error initializing binoculars data on request:', error);
+    }
+  }
+  res.json(binocularsData);
+});
+
+/**
+ * @swagger
+ * /api/binoculars/{id}:
+ *   get:
+ *     summary: Get a specific binocular model
+ *     description: Returns details for a specific binocular model by ID
+ *     tags: [Binoculars]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: The binocular model ID
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Successfully retrieved binocular
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Binocular'
+ *       404:
+ *         description: Binocular not found
+ *       500:
+ *         description: Internal server error
+ */
+app.get('/api/binoculars/:id', async (req, res) => {
+  if (Object.keys(binocularsData).length === 0) {
+    await initializeData();
+  }
+  
+  const binocular = binocularsData[req.params.id];
+  if (binocular) {
+    res.json(binocular);
+  } else {
+    res.status(404).json({ error: 'Binocular model not found' });
   }
 });
 

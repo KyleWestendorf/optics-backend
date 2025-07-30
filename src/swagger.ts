@@ -127,6 +127,120 @@ const swaggerOptions = {
               example: 'Failed to update scope data'
             }
           }
+        },
+        Binocular: {
+          type: 'object',
+          properties: {
+            magnification: {
+              type: 'number',
+              description: 'Magnification power',
+              example: 8
+            },
+            objectiveLens: {
+              type: 'number',
+              description: 'Objective lens diameter in mm',
+              example: 42
+            },
+            fieldOfView: {
+              type: 'number',
+              description: 'Field of view in degrees at 1000 yards',
+              example: 8.0
+            },
+            exitPupil: {
+              type: 'number',
+              description: 'Exit pupil diameter in mm',
+              example: 5.25
+            },
+            eyeRelief: {
+              type: 'number',
+              description: 'Eye relief in mm',
+              example: 17
+            },
+            closeFocus: {
+              type: 'number',
+              description: 'Minimum focus distance in feet',
+              example: 5
+            },
+            weight: {
+              type: 'number',
+              description: 'Weight in ounces',
+              example: 21.8
+            },
+            prismType: {
+              type: 'string',
+              enum: ['Roof', 'Porro'],
+              description: 'Type of prism system',
+              example: 'Roof'
+            },
+            model: {
+              type: 'string',
+              description: 'Binocular model name',
+              example: 'Diamondback HD 8x42'
+            },
+            manufacturer: {
+              type: 'string',
+              description: 'Manufacturer name',
+              example: 'Vortex'
+            },
+            series: {
+              type: 'string',
+              description: 'Product series',
+              example: 'Diamondback HD'
+            },
+            description: {
+              type: 'string',
+              description: 'Product description',
+              example: 'Premium HD optical system delivers exceptional resolution'
+            },
+            price: {
+              type: 'string',
+              description: 'Price',
+              example: '$229.99'
+            },
+            url: {
+              type: 'string',
+              description: 'Product URL',
+              example: 'https://vortexoptics.com/vortex-diamondback-hd-8x42-binoculars.html'
+            },
+            features: {
+              type: 'array',
+              items: {
+                type: 'string'
+              },
+              description: 'Key features list',
+              example: ['HD Glass', 'Fully Multi-Coated', 'Dielectric Coating']
+            },
+            useCase: {
+              type: 'array',
+              items: {
+                type: 'string'
+              },
+              description: 'Recommended use cases',
+              example: ['Birdwatching', 'Wildlife Viewing', 'Hunting']
+            },
+            waterproof: {
+              type: 'boolean',
+              description: 'Waterproof construction',
+              example: true
+            },
+            fogproof: {
+              type: 'boolean',
+              description: 'Fogproof construction',
+              example: true
+            },
+            coatings: {
+              type: 'string',
+              description: 'Lens coating type',
+              example: 'Fully Multi-Coated'
+            }
+          }
+        },
+        BinocularCollection: {
+          type: 'object',
+          additionalProperties: {
+            $ref: '#/components/schemas/Binocular'
+          },
+          description: 'Collection of binoculars indexed by unique keys'
         }
       }
     }
