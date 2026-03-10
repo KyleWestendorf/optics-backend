@@ -183,6 +183,8 @@ export async function scrapeLeupoldScopes(): Promise<{ [key: string]: Scope }> {
           const priceEl = item.querySelector('.price');
           const linkEl = item.querySelector('.product-item-link') as HTMLAnchorElement;
           const descriptionEl = item.querySelector('.description');
+          const imgEl = (item.querySelector('.product-image-photo') || item.querySelector('.product-image-container img') || item.querySelector('.product-item-photo img') || item.querySelector('img')) as HTMLImageElement;
+          const imageUrl = imgEl?.src || '';
 
           if (titleEl && priceEl) {
             const title = titleEl.textContent?.trim() || '';
@@ -288,7 +290,8 @@ export async function scrapeLeupoldScopes(): Promise<{ [key: string]: Scope }> {
               url: url,
               reticle: detectedReticle,
               series: series,
-              objectiveLens
+              objectiveLens,
+              imageUrl: imageUrl || undefined
             };
           }
         });

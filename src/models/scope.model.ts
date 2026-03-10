@@ -9,6 +9,7 @@ export interface Scope {
   url: string;
   series: string;
   objectiveLens: number;
+  imageUrl?: string;
   reticle?: {
     type: string;
     description: string;

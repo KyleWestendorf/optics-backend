@@ -126,6 +126,8 @@ export async function scrapeAmazonScopes(): Promise<{ [key: string]: Scope }> {
           const titleElement = result.querySelector('h2 span') || result.querySelector('[data-cy="title-recipe"] span') || result.querySelector('.s-line-clamp-4 span');
           const priceElement = result.querySelector('.a-price-whole') || result.querySelector('.a-price .a-offscreen') || result.querySelector('.a-price-symbol');
           const linkElement = result.querySelector('h2 a') || result.querySelector('[data-cy="title-recipe"] a') as HTMLAnchorElement;
+          const imgElement = result.querySelector('.s-image') as HTMLImageElement;
+          const imageUrl = imgElement?.src || '';
           
           if (!titleElement || !linkElement) {
             console.log('Missing title or link element for result', index);
@@ -243,7 +245,8 @@ export async function scrapeAmazonScopes(): Promise<{ [key: string]: Scope }> {
             url: cleanUrl,
             series,
             objectiveLens,
-            reticle
+            reticle,
+            imageUrl: imageUrl || undefined
           };
         } catch (error) {
           console.error('Error processing search result:', error);
