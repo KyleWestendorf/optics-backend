@@ -47,6 +47,16 @@ app.use(cors({
 
 app.use(express.json());
 
+// Auth middleware for refresh endpoints
+function requireApiKey(req: express.Request, res: express.Response, next: express.NextFunction) {
+  const apiKey = req.headers['x-api-key'];
+  const expectedKey = process.env.REFRESH_API_KEY;
+  if (!expectedKey || apiKey !== expectedKey) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  next();
+}
+
 // Setup Swagger documentation
 setupSwagger(app);
 
@@ -201,7 +211,7 @@ app.get('/api/scopes', async (req, res) => {
  *             schema:
  *               $ref: '#/components/schemas/ErrorResponse'
  */
-app.post('/api/scopes/refresh', async (req, res) => {
+app.post('/api/scopes/refresh', requireApiKey, async (req, res) => {
   try {
     const newScopes = await scrapeLeupoldScopes();
     scopesData = {
@@ -272,7 +282,7 @@ app.get('/api/amazon-scopes', async (req, res) => {
  *             schema:
  *               $ref: '#/components/schemas/ErrorResponse'
  */
-app.post('/api/amazon-scopes/refresh', async (req, res) => {
+app.post('/api/amazon-scopes/refresh', requireApiKey, async (req, res) => {
   try {
     const newAmazonScopes = await scrapeAmazonScopes();
     amazonScopesData = {
