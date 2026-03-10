@@ -49,8 +49,8 @@ app.use(express.json());
 
 // Auth middleware for refresh endpoints
 function requireApiKey(req: express.Request, res: express.Response, next: express.NextFunction) {
-  const apiKey = req.headers['x-api-key'];
-  const expectedKey = process.env.REFRESH_API_KEY;
+  const apiKey = (req.headers['x-api-key'] as string)?.trim();
+  const expectedKey = process.env.REFRESH_API_KEY?.trim();
   if (!expectedKey || apiKey !== expectedKey) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
