@@ -48,3 +48,4 @@ pids/
 # Data files
 data/scopes.json 
 .vercel
+.env*.local
