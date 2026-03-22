@@ -7,6 +7,9 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import path from 'path';
 import { mkdir } from 'fs/promises';
 import { setupSwagger } from './swagger';
+import analyticsRoutes from './routes/analytics';
+import searchConsoleRoutes from './routes/search-console';
+import competitorSearchRoutes from './routes/competitor-search';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,14 +22,13 @@ const allowedOrigins = [
   'https://optics-c9pb.vercel.app',    // Vercel frontend URL
   'https://optics-frj6kqm88-kyle-westendorfs-projects.vercel.app',
   'https://riflescopepreview.com',
-  'https://riflescopepreview.com',
-  'https://opticpreview.com',
+  'https://www.riflescopepreview.com',
+  'https://opticspreview.com',
+  'https://www.opticspreview.com',
   'https://huntingscopepreview.com',
+  'https://www.huntingscopepreview.com',
   'https://binocularpreview.com',
-  'https://www.riflescopepreview.com/',
-  'https://www.opticpreview.com/',
-  'https://www.huntingscopepreview.com/',
-  'https://www.binocularpreview.com/',
+  'https://www.binocularpreview.com',
 ];
 
 app.use(cors({
@@ -396,6 +398,15 @@ app.get('/', (req, res) => {
     swagger: '/api-docs'
   });
 });
+
+// Analytics routes (GA4 summary)
+app.use('/api/analytics', requireApiKey, analyticsRoutes);
+
+// Search Console routes
+app.use('/api/search-console', requireApiKey, searchConsoleRoutes);
+
+// Competitor search routes
+app.use('/api/competitor-search', requireApiKey, competitorSearchRoutes);
 
 // Initialize data when server starts
 initializeData().then(() => {
