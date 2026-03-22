@@ -35,24 +35,29 @@ async function getPropertySummary(client: BetaAnalyticsDataClient, propertyId: s
   });
 
   // Affiliate click events — last 7 days
-  const [affiliateReport] = await client.runReport({
-    property: `properties/${propertyId}`,
-    dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
-    dimensions: [
-      { name: 'eventName' },
-      { name: 'customEvent:product_name' },
-      { name: 'customEvent:page_source' },
-    ],
-    metrics: [{ name: 'eventCount' }],
-    dimensionFilter: {
-      filter: {
-        fieldName: 'eventName',
-        stringFilter: { value: 'affiliate_click' },
+  // Use eventName only (custom dimensions may not be registered in GA4 yet)
+  let affiliateClicks: any[] = [];
+  try {
+    const [affiliateReport] = await client.runReport({
+      property: `properties/${propertyId}`,
+      dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+      dimensions: [{ name: 'eventName' }],
+      metrics: [{ name: 'eventCount' }],
+      dimensionFilter: {
+        filter: {
+          fieldName: 'eventName',
+          stringFilter: { value: 'affiliate_click' },
+        },
       },
-    },
-    orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
-    limit: 50,
-  });
+      limit: 50,
+    });
+    affiliateClicks = (affiliateReport.rows || []).map((row) => ({
+      event: row.dimensionValues?.[0]?.value,
+      clicks: Number(row.metricValues?.[0]?.value || 0),
+    }));
+  } catch (err: any) {
+    affiliateClicks = [{ error: err.message }];
+  }
 
   return {
     topPages: (trafficReport.rows || []).map((row) => ({
@@ -62,11 +67,7 @@ async function getPropertySummary(client: BetaAnalyticsDataClient, propertyId: s
       bounceRate: Number(row.metricValues?.[2]?.value || 0),
       avgSessionDuration: Number(row.metricValues?.[3]?.value || 0),
     })),
-    affiliateClicks: (affiliateReport.rows || []).map((row) => ({
-      productName: row.dimensionValues?.[1]?.value,
-      pageSource: row.dimensionValues?.[2]?.value,
-      clicks: Number(row.metricValues?.[0]?.value || 0),
-    })),
+    affiliateClicks,
   };
 }
 
