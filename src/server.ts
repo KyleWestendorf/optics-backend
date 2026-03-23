@@ -1,8 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import cron from 'node-cron';
-import { scrapeLeupoldScopes } from './scripts/scrape-leupold';
-import { scrapeAmazonScopes } from './scripts/scrape-amazon';
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import path from 'path';
 import { mkdir } from 'fs/promises';
@@ -10,8 +8,25 @@ import { setupSwagger } from './swagger';
 import analyticsRoutes from './routes/analytics';
 import searchConsoleRoutes from './routes/search-console';
 import competitorSearchRoutes from './routes/competitor-search';
-import dashboardRoutes from './routes/dashboard';
-import { runSnapshot } from './scripts/snapshot';
+
+// Lazy-load heavy dependencies that crash Vercel serverless
+// (puppeteer for scrapers, better-sqlite3 for dashboard)
+async function getScrapeLeupold() {
+  const mod = await import('./scripts/scrape-leupold');
+  return mod.scrapeLeupoldScopes;
+}
+async function getScrapeAmazon() {
+  const mod = await import('./scripts/scrape-amazon');
+  return mod.scrapeAmazonScopes;
+}
+async function getDashboardRoutes() {
+  const mod = await import('./routes/dashboard');
+  return mod.default;
+}
+async function getRunSnapshot() {
+  const mod = await import('./scripts/snapshot');
+  return mod.runSnapshot;
+}
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -99,20 +114,30 @@ async function initializeData() {
 
     // If no Leupold data exists or the data is empty, trigger initial scrape
     if (!existsSync(scopesFilePath) || Object.keys(scopesData).length === 0) {
-      console.log('No Leupold scope data found. Initiating first scrape...');
-      const newScopes = await scrapeLeupoldScopes();
-      scopesData = newScopes;
-      writeFileSync(scopesFilePath, JSON.stringify(scopesData, null, 2));
-      console.log('Initial Leupold scope data created successfully');
+      try {
+        console.log('No Leupold scope data found. Initiating first scrape...');
+        const scrapeLeupoldScopes = await getScrapeLeupold();
+        const newScopes = await scrapeLeupoldScopes();
+        scopesData = newScopes;
+        writeFileSync(scopesFilePath, JSON.stringify(scopesData, null, 2));
+        console.log('Initial Leupold scope data created successfully');
+      } catch (error) {
+        console.warn('Scraper unavailable (likely serverless environment), skipping initial scrape');
+      }
     }
 
     // If no Amazon data exists or the data is empty, trigger initial scrape
     if (!existsSync(amazonScopesFilePath) || Object.keys(amazonScopesData).length === 0) {
-      console.log('No Amazon scope data found. Initiating first scrape...');
-      const newAmazonScopes = await scrapeAmazonScopes();
-      amazonScopesData = newAmazonScopes;
-      writeFileSync(amazonScopesFilePath, JSON.stringify(amazonScopesData, null, 2));
-      console.log('Initial Amazon scope data created successfully');
+      try {
+        console.log('No Amazon scope data found. Initiating first scrape...');
+        const scrapeAmazonScopes = await getScrapeAmazon();
+        const newAmazonScopes = await scrapeAmazonScopes();
+        amazonScopesData = newAmazonScopes;
+        writeFileSync(amazonScopesFilePath, JSON.stringify(amazonScopesData, null, 2));
+        console.log('Initial Amazon scope data created successfully');
+      } catch (error) {
+        console.warn('Scraper unavailable (likely serverless environment), skipping initial scrape');
+      }
     }
   } catch (error) {
     console.error('Error initializing data:', error);
@@ -123,15 +148,10 @@ async function initializeData() {
 cron.schedule('0 0 * * *', async () => {
   try {
     console.log('Starting daily Leupold scope data update...');
+    const scrapeLeupoldScopes = await getScrapeLeupold();
     const newScopes = await scrapeLeupoldScopes();
-    
-    // Merge new data with existing data
-    scopesData = {
-      ...scopesData,
-      ...newScopes
-    };
 
-    // Save updated data
+    scopesData = { ...scopesData, ...newScopes };
     writeFileSync(scopesFilePath, JSON.stringify(scopesData, null, 2));
     console.log('Leupold scope data updated successfully');
   } catch (error) {
@@ -143,15 +163,10 @@ cron.schedule('0 0 * * *', async () => {
 cron.schedule('0 1 * * *', async () => {
   try {
     console.log('Starting daily Amazon scope data update...');
+    const scrapeAmazonScopes = await getScrapeAmazon();
     const newAmazonScopes = await scrapeAmazonScopes();
-    
-    // Merge new data with existing data
-    amazonScopesData = {
-      ...amazonScopesData,
-      ...newAmazonScopes
-    };
 
-    // Save updated data
+    amazonScopesData = { ...amazonScopesData, ...newAmazonScopes };
     writeFileSync(amazonScopesFilePath, JSON.stringify(amazonScopesData, null, 2));
     console.log('Amazon scope data updated successfully');
   } catch (error) {
@@ -162,6 +177,7 @@ cron.schedule('0 1 * * *', async () => {
 // Schedule daily dashboard snapshot at 2 AM (after scrapers finish)
 cron.schedule('0 2 * * *', async () => {
   try {
+    const runSnapshot = await getRunSnapshot();
     await runSnapshot();
   } catch (error) {
     console.error('Error running dashboard snapshot:', error);
@@ -226,11 +242,9 @@ app.get('/api/scopes', async (req, res) => {
  */
 app.post('/api/scopes/refresh', requireApiKey, async (req, res) => {
   try {
+    const scrapeLeupoldScopes = await getScrapeLeupold();
     const newScopes = await scrapeLeupoldScopes();
-    scopesData = {
-      ...scopesData,
-      ...newScopes
-    };
+    scopesData = { ...scopesData, ...newScopes };
     writeFileSync(scopesFilePath, JSON.stringify(scopesData, null, 2));
     res.json({ message: 'Leupold scope data updated successfully' });
   } catch (error) {
@@ -264,6 +278,7 @@ app.get('/api/amazon-scopes', async (req, res) => {
   if (Object.keys(amazonScopesData).length === 0) {
     try {
       console.log('No Amazon data found, attempting to scrape...');
+      const scrapeAmazonScopes = await getScrapeAmazon();
       const newAmazonScopes = await scrapeAmazonScopes();
       amazonScopesData = newAmazonScopes;
       writeFileSync(amazonScopesFilePath, JSON.stringify(amazonScopesData, null, 2));
@@ -297,11 +312,9 @@ app.get('/api/amazon-scopes', async (req, res) => {
  */
 app.post('/api/amazon-scopes/refresh', requireApiKey, async (req, res) => {
   try {
+    const scrapeAmazonScopes = await getScrapeAmazon();
     const newAmazonScopes = await scrapeAmazonScopes();
-    amazonScopesData = {
-      ...amazonScopesData,
-      ...newAmazonScopes
-    };
+    amazonScopesData = { ...amazonScopesData, ...newAmazonScopes };
     writeFileSync(amazonScopesFilePath, JSON.stringify(amazonScopesData, null, 2));
     res.json({ message: 'Amazon scope data updated successfully' });
   } catch (error) {
@@ -419,8 +432,15 @@ app.use('/api/search-console', requireApiKey, searchConsoleRoutes);
 // Competitor search routes
 app.use('/api/competitor-search', requireApiKey, competitorSearchRoutes);
 
-// Dashboard API routes
-app.use('/api/dashboard', requireApiKey, dashboardRoutes);
+// Dashboard API routes (lazy-loaded to avoid better-sqlite3 crash on serverless)
+app.use('/api/dashboard', requireApiKey, async (req, res, next) => {
+  try {
+    const router = await getDashboardRoutes();
+    router(req, res, next);
+  } catch (error) {
+    res.status(503).json({ error: 'Dashboard unavailable in this environment' });
+  }
+});
 
 // Serve dashboard HTML
 app.use('/dashboard', express.static(path.join(__dirname, 'dashboard')));
