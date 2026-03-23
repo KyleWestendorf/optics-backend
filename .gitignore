@@ -49,3 +49,6 @@ pids/
 data/scopes.json 
 .vercel
 .env*.local
+data/dashboard.db
+data/dashboard.db-wal
+data/dashboard.db-shm
