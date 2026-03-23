@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optics Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0f1117;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .range-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .range-btn {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #94a3b8;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .range-btn:hover { background: rgba(255,255,255,0.08); color: #e2e8f0; }
+
+    .range-btn.active {
+      background: rgba(96,165,250,0.15);
+      border-color: #60a5fa;
+      color: #60a5fa;
+    }
+
+    /* ── Site Tabs ── */
+    .tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .tab {
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      user-select: none;
+    }
+
+    .tab:hover { color: #e2e8f0; }
+
+    .tab.active {
+      color: #60a5fa;
+      border-bottom: 2px solid #60a5fa;
+    }
+
+    /* ── Main container ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* ── Loading / Error ── */
+    .status-msg {
+      text-align: center;
+      padding: 40px;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .status-msg.error { color: #f87171; }
+
+    /* ── KPI Cards ── */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .kpi-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .kpi-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    .kpi-value {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .kpi-delta {
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .kpi-delta.positive { color: #4ade80; }
+    .kpi-delta.negative { color: #f87171; }
+    .kpi-delta.neutral  { color: #94a3b8; }
+
+    /* ── Charts ── */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .chart-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .chart-card h2 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+    }
+
+    .chart-card canvas { width: 100% !important; }
+
+    /* ── Tables ── */
+    .table-section {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+    }
+
+    .table-section h2 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #64748b;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: background 0.1s;
+    }
+
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+    tbody td {
+      padding: 10px 12px;
+      color: #cbd5e1;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+
+    .keyword-cell {
+      display: flex;
+      align-items: center;
+    }
+
+    .change-positive { color: #4ade80; }
+    .change-negative { color: #f87171; }
+    .change-neutral  { color: #94a3b8; }
+
+    .empty-msg {
+      text-align: center;
+      padding: 24px;
+      color: #64748b;
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 640px) {
+      .header { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .charts-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Optics Dashboard</h1>
+    <div class="range-buttons">
+      <button class="range-btn active" data-days="7">7d</button>
+      <button class="range-btn" data-days="30">30d</button>
+      <button class="range-btn" data-days="90">90d</button>
+    </div>
+  </div>
+
+  <!-- Site Tabs -->
+  <div class="tabs">
+    <div class="tab active" data-site="riflescopepreview">riflescopepreview.com</div>
+    <div class="tab" data-site="opticspreview">opticspreview.com</div>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+    <div id="status" class="status-msg" style="display:none;"></div>
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid" id="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Affiliate Clicks</div>
+        <div class="kpi-value" id="kpi-clicks" style="color:#4ade80;">—</div>
+        <div class="kpi-delta neutral" id="kpi-clicks-delta">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Page Views</div>
+        <div class="kpi-value" id="kpi-views" style="color:#60a5fa;">—</div>
+        <div class="kpi-delta neutral" id="kpi-views-delta">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Search Impressions</div>
+        <div class="kpi-value" id="kpi-impressions" style="color:#c084fc;">—</div>
+        <div class="kpi-delta neutral" id="kpi-impressions-delta">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Avg Position</div>
+        <div class="kpi-value" id="kpi-position" style="color:#fbbf24;">—</div>
+        <div class="kpi-delta neutral" id="kpi-position-delta">—</div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h2>Affiliate Clicks Over Time</h2>
+        <canvas id="clicksChart" height="200"></canvas>
+      </div>
+      <div class="chart-card">
+        <h2>Daily Page Views</h2>
+        <canvas id="viewsChart" height="200"></canvas>
+      </div>
+    </div>
+
+    <!-- Keyword Rankings Table -->
+    <div class="table-section">
+      <h2>Keyword Rankings</h2>
+      <div id="keywords-table-wrap"></div>
+    </div>
+
+    <!-- Top Pages Table -->
+    <div class="table-section">
+      <h2>Top Pages</h2>
+      <div id="pages-table-wrap"></div>
+    </div>
+  </div>
+
+  <script>
+    // ── State ──────────────────────────────────────────────────────────────
+    let currentSite = 'riflescopepreview';
+    let currentDays = 7;
+    let clicksChart = null;
+    let viewsChart  = null;
+
+    // ── Auth helpers ───────────────────────────────────────────────────────
+    function getApiKey() {
+      return localStorage.getItem('optics_dashboard_api_key');
+    }
+
+    function promptApiKey() {
+      const key = prompt('Enter your API key to access the dashboard:');
+      if (key && key.trim()) {
+        localStorage.setItem('optics_dashboard_api_key', key.trim());
+        return key.trim();
+      }
+      return null;
+    }
+
+    function ensureApiKey() {
+      let key = getApiKey();
+      if (!key) {
+        key = promptApiKey();
+      }
+      return key;
+    }
+
+    // ── Fetch ──────────────────────────────────────────────────────────────
+    async function fetchData() {
+      const key = ensureApiKey();
+      if (!key) {
+        showStatus('API key is required to view the dashboard.', true);
+        return;
+      }
+
+      hideStatus();
+      showStatus('Loading…', false);
+
+      const url = `/api/dashboard/trends?days=${currentDays}&site=${currentSite}`;
+
+      let res;
+      try {
+        res = await fetch(url, {
+          headers: { 'x-api-key': key }
+        });
+      } catch (err) {
+        showStatus(`Network error: ${err.message}`, true);
+        return;
+      }
+
+      if (res.status === 401) {
+        localStorage.removeItem('optics_dashboard_api_key');
+        showStatus('Invalid API key. Please reload to try again.', true);
+        const newKey = promptApiKey();
+        if (newKey) fetchData();
+        return;
+      }
+
+      if (!res.ok) {
+        showStatus(`Server error: ${res.status} ${res.statusText}`, true);
+        return;
+      }
+
+      let data;
+      try {
+        data = await res.json();
+      } catch (err) {
+        showStatus('Failed to parse server response.', true);
+        return;
+      }
+
+      hideStatus();
+
+      const summary  = data.summary  || {};
+      const daily    = data.daily    || [];
+      const keywords = data.keywords || [];
+      const pages    = data.pages    || [];
+
+      renderKPICards(summary);
+      renderCharts(daily);
+      renderKeywordsTable(keywords);
+      renderPagesTable(pages);
+    }
+
+    // ── Status helpers ─────────────────────────────────────────────────────
+    function showStatus(msg, isError) {
+      const el = document.getElementById('status');
+      el.textContent = msg;
+      el.className = 'status-msg' + (isError ? ' error' : '');
+      el.style.display = 'block';
+    }
+
+    function hideStatus() {
+      document.getElementById('status').style.display = 'none';
+    }
+
+    // ── KPI Cards ──────────────────────────────────────────────────────────
+    function renderKPICards(summary) {
+      // Affiliate Clicks — higher is better
+      setKPI(
+        'kpi-clicks',
+        'kpi-clicks-delta',
+        summary.affiliateClicks,
+        summary.prevAffiliateClicks,
+        false
+      );
+
+      // Page Views — higher is better
+      setKPI(
+        'kpi-views',
+        'kpi-views-delta',
+        summary.pageViews,
+        summary.prevPageViews,
+        false
+      );
+
+      // Search Impressions — higher is better
+      setKPI(
+        'kpi-impressions',
+        'kpi-impressions-delta',
+        summary.searchImpressions,
+        summary.prevSearchImpressions,
+        false
+      );
+
+      // Avg Position — lower is better (invert color logic)
+      setKPI(
+        'kpi-position',
+        'kpi-position-delta',
+        summary.avgPosition != null ? Number(summary.avgPosition).toFixed(1) : null,
+        summary.prevAvgPosition,
+        true,
+        summary.avgPosition,
+        summary.prevAvgPosition
+      );
+    }
+
+    function setKPI(valueId, deltaId, current, prev, invertColors, rawCurrent, rawPrev) {
+      const valueEl = document.getElementById(valueId);
+      const deltaEl = document.getElementById(deltaId);
+
+      valueEl.textContent = current != null ? formatNumber(current) : '—';
+
+      // For position we pass rawCurrent/rawPrev separately because current is already formatted string
+      const currNum = rawCurrent != null ? rawCurrent : current;
+      const prevNum = rawPrev != null ? rawPrev : prev;
+
+      if (currNum == null || prevNum == null || prevNum === 0) {
+        deltaEl.textContent = '—';
+        deltaEl.className = 'kpi-delta neutral';
+        return;
+      }
+
+      const diff = ((currNum - prevNum) / Math.abs(prevNum)) * 100;
+      const absDiff = Math.abs(diff).toFixed(1);
+
+      let isPositive;
+      if (invertColors) {
+        // lower number = better
+        isPositive = currNum < prevNum;
+      } else {
+        isPositive = diff > 0;
+      }
+
+      if (Math.abs(diff) < 0.05) {
+        deltaEl.textContent = '—';
+        deltaEl.className = 'kpi-delta neutral';
+      } else if (isPositive) {
+        deltaEl.textContent = `▲ ${absDiff}%`;
+        deltaEl.className = 'kpi-delta positive';
+      } else {
+        deltaEl.textContent = `▼ ${absDiff}%`;
+        deltaEl.className = 'kpi-delta negative';
+      }
+    }
+
+    function formatNumber(n) {
+      if (n == null) return '—';
+      const num = Number(n);
+      if (isNaN(num)) return String(n);
+      if (num >= 1_000_000) return (num / 1_000_000).toFixed(1) + 'M';
+      if (num >= 1_000)     return (num / 1_000).toFixed(1) + 'K';
+      return num.toLocaleString();
+    }
+
+    // ── Charts ─────────────────────────────────────────────────────────────
+    const CHART_DEFAULTS = {
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(15,17,23,0.95)',
+          borderColor: 'rgba(255,255,255,0.12)',
+          borderWidth: 1,
+          titleColor: '#e2e8f0',
+          bodyColor: '#94a3b8',
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(255,255,255,0.06)' },
+          ticks: { color: '#94a3b8', font: { size: 11 } }
+        },
+        y: {
+          grid: { color: 'rgba(255,255,255,0.06)' },
+          ticks: { color: '#94a3b8', font: { size: 11 } },
+          beginAtZero: true
+        }
+      }
+    };
+
+    function renderCharts(daily) {
+      const labels = daily.map(d => d.date ? d.date.substring(5) : '');
+      const clicksData = daily.map(d => d.affiliateClicks ?? 0);
+      const viewsData  = daily.map(d => d.pageViews ?? 0);
+
+      // Destroy old charts
+      if (clicksChart) { clicksChart.destroy(); clicksChart = null; }
+      if (viewsChart)  { viewsChart.destroy();  viewsChart  = null; }
+
+      const clicksCtx = document.getElementById('clicksChart').getContext('2d');
+      clicksChart = new Chart(clicksCtx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{
+            data: clicksData,
+            backgroundColor: '#4ade80',
+            borderRadius: 4,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true,
+          ...CHART_DEFAULTS
+        }
+      });
+
+      const viewsCtx = document.getElementById('viewsChart').getContext('2d');
+      viewsChart = new Chart(viewsCtx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [{
+            data: viewsData,
+            borderColor: '#60a5fa',
+            backgroundColor: 'rgba(96,165,250,0.1)',
+            borderWidth: 2,
+            pointBackgroundColor: '#60a5fa',
+            pointRadius: 3,
+            tension: 0.3,
+            fill: true
+          }]
+        },
+        options: {
+          responsive: true,
+          ...CHART_DEFAULTS
+        }
+      });
+    }
+
+    // ── Keyword Rankings Table ─────────────────────────────────────────────
+    function renderKeywordsTable(keywords) {
+      const wrap = document.getElementById('keywords-table-wrap');
+
+      if (!keywords || keywords.length === 0) {
+        wrap.innerHTML = '<div class="empty-msg">No keyword data yet</div>';
+        return;
+      }
+
+      // Sort by impressions descending
+      const sorted = [...keywords].sort((a, b) => (b.impressions ?? 0) - (a.impressions ?? 0));
+
+      const rows = sorted.map(kw => {
+        const dotColor = kw.category === 'winning'
+          ? '#4ade80'
+          : kw.category === 'striking_distance'
+            ? '#fbbf24'
+            : '#f87171';
+
+        const pos    = kw.position   != null ? Number(kw.position).toFixed(1)  : '—';
+        const impr   = kw.impressions != null ? formatNumber(kw.impressions)    : '—';
+        const ctr    = kw.ctr        != null ? (kw.ctr * 100).toFixed(2) + '%' : '—';
+        const clicks = kw.clicks     != null ? formatNumber(kw.clicks)          : '—';
+
+        let changeCell = '<span class="change-neutral">—</span>';
+        if (kw.prevPosition != null && kw.position != null) {
+          const delta = kw.prevPosition - kw.position; // positive = improved (went down)
+          if (delta > 0) {
+            changeCell = `<span class="change-positive">▲ ${Math.abs(delta).toFixed(1)}</span>`;
+          } else if (delta < 0) {
+            changeCell = `<span class="change-negative">▼ ${Math.abs(delta).toFixed(1)}</span>`;
+          }
+        }
+
+        const keyword = escapeHtml(kw.keyword || kw.query || '');
+
+        return `<tr>
+          <td><span class="keyword-cell"><span class="dot" style="background:${dotColor}"></span>${keyword}</span></td>
+          <td>${pos}</td>
+          <td>${changeCell}</td>
+          <td>${impr}</td>
+          <td>${ctr}</td>
+          <td>${clicks}</td>
+        </tr>`;
+      }).join('');
+
+      wrap.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Keyword</th>
+              <th>Position</th>
+              <th>Δ</th>
+              <th>Impressions</th>
+              <th>CTR</th>
+              <th>Clicks</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>`;
+    }
+
+    // ── Top Pages Table ────────────────────────────────────────────────────
+    function renderPagesTable(pages) {
+      const wrap = document.getElementById('pages-table-wrap');
+
+      if (!pages || pages.length === 0) {
+        wrap.innerHTML = '<div class="empty-msg">No page data yet</div>';
+        return;
+      }
+
+      const rows = pages.map(p => {
+        const views    = p.views           != null ? formatNumber(p.views)           : '—';
+        const affClicks = p.affiliateClicks != null ? formatNumber(p.affiliateClicks) : '—';
+
+        const convRate = (p.affiliateClicks != null && p.views != null && p.views > 0)
+          ? ((p.affiliateClicks / p.views) * 100).toFixed(2) + '%'
+          : '—';
+
+        const bounce = p.bounceRate != null ? (p.bounceRate * 100).toFixed(1) + '%' : '—';
+
+        const duration = p.avgDuration != null ? p.avgDuration.toFixed(1) + 's' : '—';
+
+        const page = escapeHtml(p.page || p.path || p.url || '');
+
+        return `<tr>
+          <td style="max-width:320px;word-break:break-all;">${page}</td>
+          <td>${views}</td>
+          <td>${affClicks}</td>
+          <td>${convRate}</td>
+          <td>${bounce}</td>
+          <td>${duration}</td>
+        </tr>`;
+      }).join('');
+
+      wrap.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Page</th>
+              <th>Views</th>
+              <th>Aff. Clicks</th>
+              <th>Conv Rate</th>
+              <th>Bounce Rate</th>
+              <th>Avg Duration</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>`;
+    }
+
+    // ── Utility ────────────────────────────────────────────────────────────
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ── Event Listeners ────────────────────────────────────────────────────
+    document.querySelectorAll('.range-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentDays = parseInt(btn.dataset.days, 10);
+        fetchData();
+      });
+    });
+
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentSite = tab.dataset.site;
+        fetchData();
+      });
+    });
+
+    // ── Init ───────────────────────────────────────────────────────────────
+    fetchData();
+  </script>
+</body>
+</html>
