@@ -10,6 +10,8 @@ import { setupSwagger } from './swagger';
 import analyticsRoutes from './routes/analytics';
 import searchConsoleRoutes from './routes/search-console';
 import competitorSearchRoutes from './routes/competitor-search';
+import dashboardRoutes from './routes/dashboard';
+import { runSnapshot } from './scripts/snapshot';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -154,6 +156,15 @@ cron.schedule('0 1 * * *', async () => {
     console.log('Amazon scope data updated successfully');
   } catch (error) {
     console.error('Error updating Amazon scope data:', error);
+  }
+});
+
+// Schedule daily dashboard snapshot at 2 AM (after scrapers finish)
+cron.schedule('0 2 * * *', async () => {
+  try {
+    await runSnapshot();
+  } catch (error) {
+    console.error('Error running dashboard snapshot:', error);
   }
 });
 
@@ -407,6 +418,12 @@ app.use('/api/search-console', requireApiKey, searchConsoleRoutes);
 
 // Competitor search routes
 app.use('/api/competitor-search', requireApiKey, competitorSearchRoutes);
+
+// Dashboard API routes
+app.use('/api/dashboard', requireApiKey, dashboardRoutes);
+
+// Serve dashboard HTML
+app.use('/dashboard', express.static(path.join(__dirname, 'dashboard')));
 
 // Initialize data when server starts
 initializeData().then(() => {
